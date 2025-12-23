@@ -184,23 +184,52 @@ def default_generation(n = 13):
 if __name__ == "__main__":
     import timeit
     
-    # t_start = timeit.default_timer()
-    # new_N = generate_unique_necklaces(10,tqdm_disable=False)
-    # t_end = timeit.default_timer()
-    # print(f"New Method: {(t_end - t_start):.1g}s | n_uniques = {len(new_N)}")
+    N = 8
+    t_start = timeit.default_timer()
+    new_N = generate_unique_necklaces(N,tqdm_disable=False)
+    t_end = timeit.default_timer()
+    print(f"New Method: {(t_end - t_start):.1g}s | n_uniques = {len(new_N)}")
 
-    # t_start = timeit.default_timer()
-    # old_N = generate_unique_combinations(10,tqdm_disable=False)
-    # t_end = timeit.default_timer()
-    # print(f"Old Method: {(t_end - t_start):.1g}s | n_uniques = {len(old_N)}")
+    t_start = timeit.default_timer()
+    old_N = generate_unique_combinations(N,tqdm_disable=False)
+    t_end = timeit.default_timer()
+    print(f"Old Method: {(t_end - t_start):.1g}s | n_uniques = {len(old_N)}")
 
     
 
 
     # The result is that the ernesti method works best and so we will use that. It is based off the 
     # Lyndon word algorithm if you're curious for futher reading
-    N = 13
+    
     t_start = timeit.default_timer()
     old_N = generate_unique_binaries_ernesti(N)
     t_end = timeit.default_timer()
     print(f"Ernesti Method, Generating for {N}-length binaries: {(t_end - t_start):.3g}s | n_uniques = {len(old_N)}")
+    
+
+
+    #CURRENT EXPERIMENTS
+    # IF we wanted to push this even faster (which would be silly) we could skip numbers over (2^N)/2
+    #   because only the last number shows up there. Ernesti's algo is fast enough I don't think it's
+    #   necessary but in some ways it's fun just to push it to the absolute limit.
+
+
+    # for N in np.arange(50):
+    #     N = 5
+    #     old_N = generate_unique_binaries_ernesti(N)
+    #     old_N_vals = [int("".join([str(b) for b in bn]),2) for bn in old_N]
+    #     all_binaries = [0]
+    #     for x in np.arange(1,2**(N)):
+    #         s = str(bin(x)[2:].zfill(N))
+    #         all_binaries.append(s)
+
+    #     onv = np.array(old_N_vals)
+
+    #     print(len(np.where(onv >= (2**N)//2)[0]))
+    # for i in range(2**N):
+    #     filler = str(all_binaries[i])
+    #     if i in old_N_vals:
+    #         filler += "<-"
+    #     if i == 2**N//2:
+    #         filler += "------"
+    #     print(f'{i}: {filler}')

@@ -10,7 +10,7 @@ I like to think I've grown as a developer since I wrote the original repo so fin
 
 There's a few things I want to add to this that should make life easier
 
-- [ ] a spell json so that the attributes can be loaded (i.e. you could run writer.py -<spell_name> and get the output)
+- [ ] a spell json so that the attributes can be loaded (i.e. you could run `writer.py -<spell_name>` and get the output)
 
 - [ ] Functions for outputting the two parsable methods, one is the connections array and the other is the more standard binary string method
     - I will add some detail about these but basically the connections array is a NxN array that has elements $N_{i,j}$. If points $i$ and $j$ are connected then element $N_{i,j}$ is 1, if not its 0. This is really useful for some things like encription and graph making so it's a useful form of the spell.
