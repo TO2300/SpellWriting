@@ -219,8 +219,7 @@ if __name__ == "__main__":
                      bases.polygon,
                      base_kwargs = [],
                      line_fn = line_shapes.straight,
-                     line_kwargs = [],
-                     spell_name = "Fireball")
+                     line_kwargs = [])
     test_obj.draw(savename = None,show_all_paths=True,annotate=False,
                   show_name=True)
     
