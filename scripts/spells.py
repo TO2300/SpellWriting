@@ -19,7 +19,8 @@ class custom_spell_input():
                  range,
                  duration,
                  concentration = False,
-                 ritual = False):
+                 ritual = False,
+                 spell_name = "Test"):
         """Initialisation of class.
 
         Args:
@@ -40,7 +41,7 @@ class custom_spell_input():
         self.duration = duration.lower()
         self.concentration = concentration
         self.ritual = ritual
-        self.spell_name = "Test"
+        self.spell_name = spell_name
 
 class spell():
     def __init__(self,input_obj: custom_spell_input,base_fn:Callable=bases.polygon,
@@ -83,7 +84,11 @@ class spell():
                 self.n_pol = 2*self.n_att + 1
             for i in range(len(self.txt_files)):
                 assert os.path.isfile(self.txt_files[i]), f"Could not find file {self.txt_files[i]}"
-        self.get_binary_values(override_dict)
+            self.get_binary_values(override_dict)
+        else:
+            self.n_att = n_att
+            self.n_pol = n_pol
+        
 
     def init_txt_files(self,txt_file_base):
         self.txt_file_base = txt_file_base
@@ -106,7 +111,17 @@ class spell():
             f.close()
         data = [d.replace("\n","").lower() for d in data]
         return(data)
-
+    def get_decimal_values(self,override_dict = {}):
+        decimal_array = np.zeros(self.n_att)
+        override_keys = list(override_dict.keys())
+        for i in range(self.n_att):
+            if self.atts in override_keys:
+                decimal_array[i] = override_keys[self.atts]
+            else:
+                att_items = self.read_txt_file(self.txt_files[i])
+                idx = att_items.index(self.att_strs[i])
+                decimal_array[i] = idx
+        return(decimal_array)
     def get_binary_values(self,override_dict = {}):
         binary_values = default_generation()
         self.binary_array = np.zeros((self.n_att,self.n_pol),dtype = int)
@@ -196,8 +211,6 @@ class spell():
 
 
 
-
-
     def draw_all_paths(self,x_vals,y_vals,axs,
                        all_ls = "--",all_c = 'k',all_alpha = 0.7,all_lw = 0.5):
         #loop for all k
@@ -211,15 +224,24 @@ class spell():
                          color = all_c,
                          alpha = all_alpha,
                          lw = all_lw)
+                
 if __name__ == "__main__":
     test_inp = custom_spell_input(3,"evocation",
                                   "fire","sphere (20)",
-                                  "150 feet","Instantaneous")
-    test_obj = spell(test_inp,
-                     bases.polygon,
-                     base_kwargs = [],
-                     line_fn = line_shapes.straight,
-                     line_kwargs = [])
+                                  "150 feet","Instantaneous",
+                                  spell_name="")
+    # test_obj = spell(test_inp,
+    #                  bases.polygon,
+    #                  base_kwargs = [],
+    #                  line_fn = line_shapes.straight,
+    #                  line_kwargs = [])
+    test_obj = spell(test_inp,ignore_atts=True,
+                     n_pol = 5,n_att = 2,
+                     base_kwargs = [1,-2*np.pi/5])
+    
+    test_obj.binary_array = np.zeros((test_obj.n_att,test_obj.n_pol))
+    test_obj.binary_array[0] = np.array([0,0,0,0,1])
     test_obj.draw(savename = None,show_all_paths=True,annotate=False,
                   show_name=True)
+    
     
