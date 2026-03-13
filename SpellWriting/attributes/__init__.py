@@ -22,4 +22,4 @@ for file in ROOT.glob('*.txt'):
             lines[idx] = None
         ordering[name] = lines
 
-SpellAttributes = IterEnum('SpellAttributes', ordering)
+SpellAttributes_5e = IterEnum('SpellAttributes', ordering)

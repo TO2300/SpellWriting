@@ -4,13 +4,14 @@ import inspect
 from SpellWriting.generation import edge, node, necklace
 from SpellWriting.abstract import IterEnum
 
-_get_functions = lambda module: [
-    (name.capitalize(), func) 
-    for name, func in inspect.getmembers(module, inspect.isfunction)]
+def _get_functions(module): 
+    ordering = {}
+    for name, func in inspect.getmembers(module, inspect.isfunction):
+        name = ''.join(map(str.capitalize, name.split('_'))).rstrip('s')
+        ordering[name] = func
+    return ordering
 
-
-ordering = {}
-for mod in [node, edge, necklace]:
-    print(mod.__name__)
-# TODO SpellGeneration IterEnum
-SpellGeneration = IterEnum('SpellGeneration', names=tuple())
+SpellShape = IterEnum('SpellShape', 
+                      {'Node' : _get_functions(node),
+                       'Edge' : _get_functions(edge)})
+Necklace = necklace.generate_binary_necklace
