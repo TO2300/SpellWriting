@@ -9,3 +9,7 @@ dependencies = [
     "numpy",
     "tqdm",
 ]
+
+
+[tool.setuptools.package-data]
+SpellWriting = ["data/**/*.yaml"]
