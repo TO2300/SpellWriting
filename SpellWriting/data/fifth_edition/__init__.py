@@ -30,8 +30,10 @@ _BookMap = {Path(json).stem.split('-')[-1]: json for json in _5eTools_Index}
 
 
 _5eCache = {}
-def spell_5etools(spell_name: Literal[*_5eTools_Spell_to_Json],
-                  source: Literal[*_BookMap] = 'offline') -> SpellData_5e:
+
+@classmethod
+def get_spell(cls, spell_name: Literal[*_5eTools_Spell_to_Json],
+                  source: Literal[*_BookMap] = None) -> SpellData_5e:
     """
     Retrieves a spell from 5eTools using 2024 PHB, Tasha's, and Xanathar's.
     Spells err on the side of the player's handbook, so if you want the spell
@@ -43,7 +45,8 @@ def spell_5etools(spell_name: Literal[*_5eTools_Spell_to_Json],
     spell_name : str
         Name exactly as it appears on 5eTools.
     source: str
-        Override command to grab a different book's spells
+        Override command to grab a different book's spells, literal "offline"
+        will use the preloaded spells in the library
 
     Returns
     -------
@@ -56,8 +59,7 @@ def spell_5etools(spell_name: Literal[*_5eTools_Spell_to_Json],
         choices = list(Offline_Library)
         spell_name = process.extractOne(spell_name, choices)[0]
         return Offline_Library[spell_name]
-    elif source == 'online':
-        source = None
+    elif source == 'online' or source is None:
         choices = list(_5eTools_Spell_to_Json)
         spell_name = process.extractOne(spell_name, choices)[0]
         source = _5eTools_Spell_to_Json[spell_name]
@@ -143,5 +145,7 @@ def spell_5etools(spell_name: Literal[*_5eTools_Spell_to_Json],
         if value is None:
             spell_data[key] = 'None'
     
-    return SpellData_5e(**spell_data)
+    return cls(**spell_data)
+
+setattr(SpellData_5e, 'get_spell', get_spell)
 

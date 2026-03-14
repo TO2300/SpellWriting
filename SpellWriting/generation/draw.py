@@ -9,9 +9,9 @@ from types import MappingProxyType
 import typing
 import re
 import copy
+import itertools
 
 import numpy as np
-
 
 #---------File for defining spell bases----------#
 # every base must haave an input of n and return (x,y)
@@ -192,3 +192,61 @@ class Nodes:
                    domain_max=domain_max,
                    expression='golden',
                    **kwargs)
+
+
+def binary_strings_to_list(all_binaries):
+    final_output = [[int(b) for b in list(ab)] for ab in all_binaries]
+    return(final_output)
+
+def generate_necklace(n = 13):
+
+    #stolen from https://github.com/Ernesti04/necklace_projects/blob/main/necklace_gen_v2.py
+    x = 1						# start at 1, avoid all 0s case
+    uniques = ["".join(["0"]*n)]
+    while (x < 2**n): 			# for each possible number
+        s = str(bin(x)[2:].zfill(n)) 	# get binary of number
+        cycle = [] 				# get blank list to check rotations
+        for i in range(len(s)-1): 	# for each bit in the sequence
+            #rot = cycle[i][-1] + cycle[i][:-1] #slightly slower
+            rot = s[i:] + s[:i] 		# rotate by i bits
+            cycle.append(rot) 		# add each rotation
+            if rot < s : 				# if rotation found that is smaller
+                break 				# stop searching
+        if min(cycle) == s : 		# if the number is already minimum
+            uniques.append(s) 		# add to the list
+            #print(f'\t{s}') # print results (slow)
+        x += 2 					# count odds, halves time
+    uniques = binary_strings_to_list(uniques)
+    return(uniques)
+
+
+class Edges:
+    
+    SAFE_MATH = MappingProxyType({
+        k: getattr(np, k) for k in ["sin", "cos", "tan", "arcsin", "arccos", 
+                                    "arctan", "sinh", "cosh", "tanh", "exp", 
+                                    "log", "log10", "sqrt", "abs", "fabs",
+                                    "floor", "ceil", "pi", "e"]
+        })
+    
+    PREDEFINED = MappingProxyType({})
+    
+    def __init__(self, 
+                 nodes: Nodes,
+                 expression: str = 'line', # Simple or predefined only, no parametric
+                 resolution: int = 20) -> typing.Self:
+        
+        self.nodes = nodes
+        self.x_coords = nodes[0]
+        self.y_coords = nodes[1]
+        
+        self.necklace = generate_necklace(nodes.shape[1])
+        
+        # Use numpy array to preserve fancy indexing later
+        n = nodes.shape[1]
+        # (6, 13, 2) is default where 6 orders, 13 nodes, and node pairs
+        self.line_pairings = np.array([
+            [(i, (i + order) % n) for i in range(13)]
+            for order in range(int((n-1)/2))])
+    
+        
