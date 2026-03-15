@@ -123,7 +123,7 @@ class Founts:
                 n_points: int = 13,
                 radius: float = 1,
                 start_angle:float = None,
-                ccw: bool = False,
+                cw: bool = True,
                 **kwargs) -> typing.Self:
         """
         Default polygon generation, equivalent to 
@@ -143,8 +143,8 @@ class Founts:
         start_angle : float, optional
             Angle from the circle's center to its first vertex. 
             The default is np.pi/n_points.
-        ccw: bool, optional
-            Counter clockwise flag for vertex order, the default is True
+        cw: bool, optional
+            Clockwise flag for vertex order, the default is True
 
         Returns
         -------
@@ -158,7 +158,7 @@ class Founts:
         xs = radius*np.cos(angles)
         ys = radius*np.sin(angles)
         
-        if ccw:
+        if cw:
             xs = xs[::-1]
             ys = ys[::-1]
             
