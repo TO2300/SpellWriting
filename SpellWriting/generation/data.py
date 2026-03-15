@@ -40,6 +40,7 @@ class SpellAttribute:
             self.default = options[0] if default is None else default
         self.glyph = glyph
         self.name = None
+        self.value = None
             
     def __set_name__(self, owner, name):
         self.name = name
@@ -58,6 +59,9 @@ class SpellAttribute:
         return (f'SpellAttribute('
                 f'order={self.order}, options={self.options}, '
                 f'glyph={self.glyph})')
+    
+    def __str__(self) -> str:
+        return f'<{self.name}-SpellAttribute = {self.value}>'
     
 
 class SpellData:

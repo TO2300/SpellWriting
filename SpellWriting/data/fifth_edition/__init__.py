@@ -35,7 +35,7 @@ _5eCache = {}
 def get_spell(cls, spell_name: Literal[*_5eTools_Spell_to_Json],
                   source: Literal[*_BookMap] = None) -> SpellData_5e:
     """
-    Retrieves a spell from 5eTools using 2024 PHB, Tasha's, and Xanathar's.
+    Retrieves a spell from 5eTools using 5.5e PHB, Tasha's, and Xanathar's.
     Spells err on the side of the player's handbook, so if you want the spell
     from a different book, use the source argument with 'xge', 'tce', or the
     last part of the "spells-*.json" data file name from 5e.toosl.data/spells.
@@ -96,7 +96,14 @@ def get_spell(cls, spell_name: Literal[*_5eTools_Spell_to_Json],
     if not damage_type:
         damage_type = 'None'
     
-    aoe_shape = spell.get('areaTags', None)
+    aoe_shape = spell.get('areaTags', [])
+    if len(aoe_shape) == 1:
+        aoe_shape = aoe_shape[0]
+    elif len(aoe_shape) > 1:
+        print(name, aoe_shape)
+        aoe_shape = tuple(sorted(aoe_shape))
+    if not aoe_shape:
+        aoe_shape = 'None'
     
     rg = spell['range']
     tp = rg['type']

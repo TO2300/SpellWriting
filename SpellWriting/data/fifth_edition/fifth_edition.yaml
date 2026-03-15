@@ -46,7 +46,7 @@ SpellDataConfig:
             glyph: true
         area_of_effect:
             order: 3
-            option_type: list #map
+            option_type: powerset #map
             options: [None, C, H, L, MT, N, Q, R, S, ST, W, Y]
                 # 5e.Tools has only the area types included
                 # cone: [15, 30, 40, 60]
