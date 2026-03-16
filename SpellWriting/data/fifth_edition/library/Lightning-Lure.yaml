@@ -1,9 +1,8 @@
-name: Lightning Lure
-system: 5e
-level: 0
-school: None
+area_of_effect: ST
 damage_type: Lightning
-area_of_effect:
-- ST
-range: radius (15 feet)
 duration: special (Instant)
+level: 0
+name: Lightning Lure
+range: radius (15 feet)
+school: None
+system: 5e

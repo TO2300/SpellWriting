@@ -1,9 +1,8 @@
-name: Blade of Disaster
-system: 5e
-level: 9
-school: None
+area_of_effect: MT
 damage_type: Force
-area_of_effect:
-- MT
-range: point (60 feet)
 duration: concentration (1 minute)
+level: 9
+name: Blade of Disaster
+range: point (60 feet)
+school: None
+system: 5e

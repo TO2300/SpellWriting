@@ -1,10 +1,10 @@
-name: Bigby's Hand
-system: 5e
-level: 5
-school: None
+area_of_effect: None
 damage_type:
 - Bludgeoning
 - Force
-area_of_effect: None
-range: point (120 feet)
 duration: concentration (1 minute)
+level: 5
+name: Bigby's Hand
+range: point (120 feet)
+school: None
+system: 5e

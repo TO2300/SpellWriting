@@ -1,9 +1,8 @@
-name: Stinking Cloud
-system: 5e
-level: 3
-school: None
+area_of_effect: S
 damage_type: None
-area_of_effect:
-- S
-range: point (90 feet)
 duration: concentration (1 minute)
+level: 3
+name: Stinking Cloud
+range: point (90 feet)
+school: None
+system: 5e

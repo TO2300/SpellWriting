@@ -1,8 +1,8 @@
-name: Blinding Smite
-system: 5e
-level: 3
-school: None
-damage_type: Radiant
 area_of_effect: None
-range: point (Self)
+damage_type: Radiant
 duration: timed (1 minute)
+level: 3
+name: Blinding Smite
+range: point (Self)
+school: None
+system: 5e

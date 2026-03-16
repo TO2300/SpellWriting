@@ -31,15 +31,15 @@ class Founts:
     PREDEFINED = MappingProxyType({
         'polygon' : ('radius', 
                      'start_angle',
-                     'ccw'),
+                     'cw'),
         'golden' : tuple()})
   
     #---- Numpy overrides
     def __iter__(self):
-        return iter(self.founts)
+        return iter(self.nodes)
     
     def __array__(self, dtype=None, copy=False):
-        founts = self.founts
+        founts = self.nodes
         if dtype:
             founts = founts.astype(dtype)
         if copy:
@@ -48,7 +48,7 @@ class Founts:
     
     @property
     def shape(self):
-        return self.founts.shape
+        return self.nodes.shape
     
     @property
     def T(self):
@@ -58,30 +58,30 @@ class Founts:
     
     def __getitem__(self, item):
         if isinstance(item, typing.Iterable):
-            return self.founts[*item]
-        return self.founts[item]
+            return self.nodes[*item]
+        return self.nodes[item]
     
     def __init__(self, 
-                 founts: np.ndarray = None,
+                 nodes: np.ndarray = None,
                  n_points: int = 13,
                  expression: str | tuple[str] = None,
                  domain_min: float = -1,
                  domain_max: float = 1,
                  **kwargs):
         
-        self.founts = founts
+        self.nodes = nodes
         self.n_points = n_points
         self.expression = expression
         self.domain_min = domain_min
         self.domain_max = domain_max
         self.kwargs = kwargs
         
-        if founts is None and not expression:
-            self.founts = type(self).polygon().founts
+        if nodes is None and not expression:
+            self.nodes = type(self).polygon().nodes
             return
         
-        if founts is not None:
-            self.founts = np.array([*founts])
+        if nodes is not None:
+            self.nodes = np.array([*nodes])
             return
         
         if isinstance(expression, str) and expression not in self.PREDEFINED:
@@ -91,14 +91,14 @@ class Founts:
                    **self.SAFE_MATH, 
                    'domain': domain}
             ys = eval(expression, env)
-            self.founts = np.array([domain, ys])
+            self.nodes = np.array([domain, ys])
             return
         elif isinstance(expression, str) and expression in self.PREDEFINED:
             func = getattr(type(self), expression, lambda *args, **kwargs: f'No function {expression}')
-            res = func(founts=founts, n_points=n_points, expression=expression,
+            res = func(nodes=nodes, n_points=n_points, expression=expression,
                        domain_min=domain_min, domain_max=domain_max, **kwargs)
             if isinstance(res, type(self)):
-                self.founts = res.founts
+                self.nodes = res.nodes
             else:
                 raise NotImplementedError(f"No predefined shape function for '{expression}'")
                 
@@ -108,7 +108,7 @@ class Founts:
             env = {'__builtins__': {}, **self.SAFE_MATH, 'domain': domain}
             xs = eval(expression[0], env)
             ys = eval(expression[1], env)
-            self.founts = np.array([xs, ys])
+            self.nodes = np.array([xs, ys])
             return
     
     def __repr__(self):
@@ -123,7 +123,7 @@ class Founts:
                 n_points: int = 13,
                 radius: float = 1,
                 start_angle:float = None,
-                ccw: bool = False,
+                cw: bool = True,
                 **kwargs) -> typing.Self:
         """
         Default polygon generation, equivalent to 
@@ -142,9 +142,9 @@ class Founts:
             Radius of the inscribed circle. The default is 1.
         start_angle : float, optional
             Angle from the circle's center to its first vertex. 
-            The default is np.pi/n_points.
-        ccw: bool, optional
-            Counter clockwise flag for vertex order, the default is True
+            The default is 2*np.pi/n_points.
+        cw: bool, optional
+            Clockwise flag for vertex order, the default is True
 
         Returns
         -------
@@ -152,22 +152,24 @@ class Founts:
 
         """
         if start_angle is None:
-            start_angle = np.pi/n_points
+            start_angle = 2*np.pi/n_points
+        print(f'{cw=:} {start_angle=:}')
         
-        angles = start_angle + np.linspace(0, 2*np.pi, n_points, endpoint=False)
+        # CCW Generation
+        if cw:
+            angles = start_angle + np.linspace(2*np.pi, 0, n_points, endpoint=False)
+        else:
+            angles = np.linspace(0, 2*np.pi, n_points, endpoint=False) - start_angle
+        
         xs = radius*np.cos(angles)
         ys = radius*np.sin(angles)
-        
-        if ccw:
-            xs = xs[::-1]
-            ys = ys[::-1]
             
-        kwargs.pop('founts', None)
+        kwargs.pop('nodes', None)
         kwargs.pop('expression', None)
         kwargs.pop('domain_min', None)
         kwargs.pop('domain_max', None)
             
-        return cls(founts=np.array([xs, ys]), 
+        return cls(nodes=np.array([xs, ys]), 
                    expression='polygon',
                    domain_min=-np.abs(radius),
                    domain_max=np.abs(radius),
@@ -185,10 +187,10 @@ class Founts:
         xs = np.cos(domain)*f
         ys = np.sin(domain)*f
         
-        kwargs.pop('founts', None)
+        kwargs.pop('nodes', None)
         kwargs.pop('expression', None)
         
-        return cls(founts=np.array([xs,ys]),
+        return cls(nodes=np.array([xs,ys]),
                    domain_max=domain_max,
                    expression='golden',
                    **kwargs)
@@ -231,15 +233,12 @@ class Leylines:
     
     PREDEFINED = MappingProxyType({
         'linear' : ('domain', '0*domain'),
-        'centre-circle' : ('sin(pi*domain)', 'cos(pi*domain)'),
-        'non-centre-circle' : ('b + r*sin(theta0 + domain*(theta1-theta0))',
-                               '-b + r*cos(theta0 + domain*(theta1-theta0))'),
+        'centre-circle' : ('cos(pi*domain)', 'sin(pi*domain)'),
+        'non-centre-circle' : ('b + r*cos(theta0 + domain*((theta1-theta0) % (2*pi)))',
+                               'b + r*sin(theta0 + domain*((theta1-theta0) % (2*pi)))'),
         'exponential' : ('domain', 
-                         '-(exp(12 * domain) - 1) / (exp(12 * domain_max) - 1)'),
-        'inward-exponential' : (
-            'domain', 
-            '-(exp(12 * domain) - 1) / (exp(12 * domain_max) - 1)'),
-        'outward-exponential': (
+                         '(exp(10 * domain) - 1) / (exp(10 * domain_max) - 1)'),
+        'inverse-exponential': (
             'domain', 
             '-(exp(12 * domain) - 1) / (exp(12 * domain_max) - 1)'),
         })
@@ -393,7 +392,7 @@ class Leylines:
     def generate_curves(self, samples: int = None) -> np.ndarray:
         """
         Generates a Order x Node Count x Ordered Pair x Samples array for every
-        possible combination of founts in the self.founts object evaluated using
+        possible combination of founts in the self.nodes object evaluated using
         the provided expression.
 
         Parameters
@@ -438,5 +437,5 @@ class Leylines:
             for diff, coords in enumerate(order_array):
                 plt.plot(*coords, color=cmap.colors[order])
         
-        plt.plot(*self.founts, 'bo')
-        plt.plot(*self.founts[:,0], 'ro')
+        plt.plot(*self.nodes, 'bo')
+        plt.plot(*self.nodes[:,0], 'ro')

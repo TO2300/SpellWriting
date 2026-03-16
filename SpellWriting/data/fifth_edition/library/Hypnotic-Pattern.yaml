@@ -1,9 +1,8 @@
-name: Hypnotic Pattern
-system: 5e
-level: 3
-school: Illusion
+area_of_effect: C
 damage_type: None
-area_of_effect:
-- C
-range: point (120 feet)
 duration: concentration (1 minute)
+level: 3
+name: Hypnotic Pattern
+range: point (120 feet)
+school: Illusion
+system: 5e

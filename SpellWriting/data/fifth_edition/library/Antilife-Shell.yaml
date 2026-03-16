@@ -1,9 +1,8 @@
-name: Antilife Shell
-system: 5e
-level: 5
-school: Abjuration
+area_of_effect: S
 damage_type: None
-area_of_effect:
-- S
-range: emanation (10 feet)
 duration: concentration (1 hour)
+level: 5
+name: Antilife Shell
+range: emanation (10 feet)
+school: Abjuration
+system: 5e

@@ -1,12 +1,12 @@
-name: Storm Sphere
-system: 5e
-level: 4
-school: None
-damage_type:
-- Bludgeoning
-- Lightning
 area_of_effect:
 - S
 - ST
-range: point (150 feet)
+damage_type:
+- Bludgeoning
+- Lightning
 duration: concentration (1 minute)
+level: 4
+name: Storm Sphere
+range: point (150 feet)
+school: None
+system: 5e

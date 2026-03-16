@@ -1,9 +1,8 @@
-name: Alarm
-system: 5e
-level: 1
-school: Abjuration
+area_of_effect: C
 damage_type: None
-area_of_effect:
-- C
-range: point (30 feet)
 duration: timed (8 hour)
+level: 1
+name: Alarm
+range: point (30 feet)
+school: Abjuration
+system: 5e

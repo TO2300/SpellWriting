@@ -1,10 +1,10 @@
-name: Fire Shield
-system: 5e
-level: 4
-school: None
+area_of_effect: None
 damage_type:
 - Cold
 - Fire
-area_of_effect: None
-range: point (Self)
 duration: timed (10 minute)
+level: 4
+name: Fire Shield
+range: point (Self)
+school: None
+system: 5e

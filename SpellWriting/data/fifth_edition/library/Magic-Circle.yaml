@@ -1,9 +1,8 @@
-name: Magic Circle
-system: 5e
-level: 3
-school: Abjuration
+area_of_effect: Y
 damage_type: None
-area_of_effect:
-- Y
-range: point (10 feet)
 duration: timed (1 hour)
+level: 3
+name: Magic Circle
+range: point (10 feet)
+school: Abjuration
+system: 5e

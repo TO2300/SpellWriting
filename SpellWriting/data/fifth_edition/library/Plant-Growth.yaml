@@ -1,8 +1,8 @@
-name: Plant Growth
-system: 5e
-level: 3
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: point (150 feet)
+damage_type: None
 duration: special (Instant)
+level: 3
+name: Plant Growth
+range: point (150 feet)
+school: Transmutation
+system: 5e

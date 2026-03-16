@@ -1,8 +1,8 @@
-name: Drawmij's Instant Summons
-system: 5e
-level: 6
-school: None
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: special (Permanent)
+level: 6
+name: Drawmij's Instant Summons
+range: point (Touch)
+school: None
+system: 5e

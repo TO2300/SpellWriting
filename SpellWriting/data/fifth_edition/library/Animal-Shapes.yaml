@@ -1,9 +1,8 @@
-name: Animal Shapes
-system: 5e
-level: 8
-school: Transmutation
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: point (30 feet)
 duration: timed (24 hour)
+level: 8
+name: Animal Shapes
+range: point (30 feet)
+school: Transmutation
+system: 5e

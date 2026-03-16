@@ -1,9 +1,8 @@
-name: Maddening Darkness
-system: 5e
-level: 8
-school: None
+area_of_effect: S
 damage_type: Psychic
-area_of_effect:
-- S
-range: point (150 feet)
 duration: concentration (10 minute)
+level: 8
+name: Maddening Darkness
+range: point (150 feet)
+school: None
+system: 5e

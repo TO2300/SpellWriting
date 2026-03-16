@@ -1,9 +1,8 @@
-name: Enervation
-system: 5e
-level: 5
-school: None
+area_of_effect: ST
 damage_type: Necrotic
-area_of_effect:
-- ST
-range: point (60 feet)
 duration: concentration (1 minute)
+level: 5
+name: Enervation
+range: point (60 feet)
+school: None
+system: 5e

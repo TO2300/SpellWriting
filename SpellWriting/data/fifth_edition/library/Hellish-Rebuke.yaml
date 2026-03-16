@@ -1,9 +1,8 @@
-name: Hellish Rebuke
-system: 5e
-level: 1
-school: None
+area_of_effect: ST
 damage_type: Fire
-area_of_effect:
-- ST
-range: point (60 feet)
 duration: special (Instant)
+level: 1
+name: Hellish Rebuke
+range: point (60 feet)
+school: None
+system: 5e

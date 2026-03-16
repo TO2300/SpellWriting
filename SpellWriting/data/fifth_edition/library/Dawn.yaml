@@ -1,9 +1,8 @@
-name: Dawn
-system: 5e
-level: 5
-school: None
+area_of_effect: Y
 damage_type: Radiant
-area_of_effect:
-- Y
-range: point (60 feet)
 duration: concentration (1 minute)
+level: 5
+name: Dawn
+range: point (60 feet)
+school: None
+system: 5e

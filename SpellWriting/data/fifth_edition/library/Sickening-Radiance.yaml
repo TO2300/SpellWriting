@@ -1,9 +1,8 @@
-name: Sickening Radiance
-system: 5e
-level: 4
-school: None
+area_of_effect: S
 damage_type: Radiant
-area_of_effect:
-- S
-range: point (120 feet)
 duration: concentration (10 minute)
+level: 4
+name: Sickening Radiance
+range: point (120 feet)
+school: None
+system: 5e

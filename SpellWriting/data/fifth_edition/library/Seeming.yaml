@@ -1,9 +1,8 @@
-name: Seeming
-system: 5e
-level: 5
-school: Illusion
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: point (30 feet)
 duration: timed (8 hour)
+level: 5
+name: Seeming
+range: point (30 feet)
+school: Illusion
+system: 5e

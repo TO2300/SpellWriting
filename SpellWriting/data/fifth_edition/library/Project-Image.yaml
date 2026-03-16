@@ -1,8 +1,8 @@
-name: Project Image
-system: 5e
-level: 7
-school: Illusion
-damage_type: None
 area_of_effect: None
-range: point (500 miles)
+damage_type: None
 duration: concentration (1 day)
+level: 7
+name: Project Image
+range: point (500 miles)
+school: Illusion
+system: 5e

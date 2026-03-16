@@ -1,9 +1,8 @@
-name: Leomund's Tiny Hut
-system: 5e
-level: 3
-school: None
+area_of_effect: S
 damage_type: None
-area_of_effect:
-- S
-range: emanation (10 feet)
 duration: timed (8 hour)
+level: 3
+name: Leomund's Tiny Hut
+range: emanation (10 feet)
+school: None
+system: 5e

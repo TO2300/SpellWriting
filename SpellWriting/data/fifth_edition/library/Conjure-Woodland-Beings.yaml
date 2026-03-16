@@ -1,8 +1,8 @@
-name: Conjure Woodland Beings
-system: 5e
-level: 4
-school: None
-damage_type: Force
 area_of_effect: None
-range: emanation (10 feet)
+damage_type: Force
 duration: concentration (10 minute)
+level: 4
+name: Conjure Woodland Beings
+range: emanation (10 feet)
+school: None
+system: 5e

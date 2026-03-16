@@ -1,8 +1,8 @@
-name: Control Weather
-system: 5e
-level: 8
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: sphere (5 miles)
+damage_type: None
 duration: concentration (8 hour)
+level: 8
+name: Control Weather
+range: sphere (5 miles)
+school: Transmutation
+system: 5e

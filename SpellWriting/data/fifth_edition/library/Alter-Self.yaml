@@ -1,11 +1,11 @@
-name: Alter Self
-system: 5e
-level: 2
-school: Transmutation
+area_of_effect: None
 damage_type:
 - Bludgeoning
 - Piercing
 - Slashing
-area_of_effect: None
-range: point (Self)
 duration: concentration (1 hour)
+level: 2
+name: Alter Self
+range: point (Self)
+school: Transmutation
+system: 5e

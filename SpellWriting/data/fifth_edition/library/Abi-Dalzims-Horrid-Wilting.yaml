@@ -1,9 +1,8 @@
-name: Abi-Dalzim's Horrid Wilting
-system: 5e
-level: 8
-school: None
+area_of_effect: C
 damage_type: Necrotic
-area_of_effect:
-- C
-range: point (150 feet)
 duration: special (Instant)
+level: 8
+name: Abi-Dalzim's Horrid Wilting
+range: point (150 feet)
+school: None
+system: 5e

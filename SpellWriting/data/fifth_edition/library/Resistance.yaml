@@ -1,9 +1,8 @@
-name: Resistance
-system: 5e
-level: 0
-school: Abjuration
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (Touch)
 duration: concentration (1 minute)
+level: 0
+name: Resistance
+range: point (Touch)
+school: Abjuration
+system: 5e

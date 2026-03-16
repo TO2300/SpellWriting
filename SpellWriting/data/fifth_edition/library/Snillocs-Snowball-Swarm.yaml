@@ -1,9 +1,8 @@
-name: Snilloc's Snowball Swarm
-system: 5e
-level: 2
-school: None
+area_of_effect: S
 damage_type: Cold
-area_of_effect:
-- S
-range: point (90 feet)
 duration: special (Instant)
+level: 2
+name: Snilloc's Snowball Swarm
+range: point (90 feet)
+school: None
+system: 5e

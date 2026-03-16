@@ -1,8 +1,8 @@
-name: Silent Image
-system: 5e
-level: 1
-school: Illusion
-damage_type: None
 area_of_effect: None
-range: point (60 feet)
+damage_type: None
 duration: concentration (10 minute)
+level: 1
+name: Silent Image
+range: point (60 feet)
+school: Illusion
+system: 5e

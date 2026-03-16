@@ -1,8 +1,8 @@
-name: Tasha's Otherworldly Guise
-system: 5e
-level: 6
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: concentration (1 minute)
+level: 6
+name: Tasha's Otherworldly Guise
+range: point (Self)
+school: Transmutation
+system: 5e

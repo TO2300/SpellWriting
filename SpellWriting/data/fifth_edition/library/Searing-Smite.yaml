@@ -1,8 +1,8 @@
-name: Searing Smite
-system: 5e
-level: 1
-school: None
-damage_type: Fire
 area_of_effect: None
-range: point (Self)
+damage_type: Fire
 duration: timed (1 minute)
+level: 1
+name: Searing Smite
+range: point (Self)
+school: None
+system: 5e

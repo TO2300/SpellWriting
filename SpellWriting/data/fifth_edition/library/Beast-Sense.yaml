@@ -1,9 +1,8 @@
-name: Beast Sense
-system: 5e
-level: 2
-school: Divination
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (Touch)
 duration: concentration (1 hour)
+level: 2
+name: Beast Sense
+range: point (Touch)
+school: Divination
+system: 5e

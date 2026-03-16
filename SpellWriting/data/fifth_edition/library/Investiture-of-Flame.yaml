@@ -1,9 +1,8 @@
-name: Investiture of Flame
-system: 5e
-level: 6
-school: Transmutation
+area_of_effect: L
 damage_type: Fire
-area_of_effect:
-- L
-range: point (Self)
 duration: concentration (10 minute)
+level: 6
+name: Investiture of Flame
+range: point (Self)
+school: Transmutation
+system: 5e

@@ -1,9 +1,8 @@
-name: Forcecage
-system: 5e
-level: 7
-school: None
+area_of_effect: C
 damage_type: None
-area_of_effect:
-- C
-range: point (100 feet)
 duration: concentration (1 hour)
+level: 7
+name: Forcecage
+range: point (100 feet)
+school: None
+system: 5e

@@ -1,8 +1,8 @@
-name: Flame Arrows
-system: 5e
-level: 3
-school: Transmutation
-damage_type: Fire
 area_of_effect: None
-range: point (Touch)
+damage_type: Fire
 duration: concentration (1 hour)
+level: 3
+name: Flame Arrows
+range: point (Touch)
+school: Transmutation
+system: 5e

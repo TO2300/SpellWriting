@@ -1,9 +1,8 @@
-name: Animal Friendship
-system: 5e
-level: 1
-school: Enchantment
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (30 feet)
 duration: timed (24 hour)
+level: 1
+name: Animal Friendship
+range: point (30 feet)
+school: Enchantment
+system: 5e

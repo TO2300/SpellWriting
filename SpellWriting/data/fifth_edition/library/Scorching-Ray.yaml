@@ -1,10 +1,10 @@
-name: Scorching Ray
-system: 5e
-level: 2
-school: None
-damage_type: Fire
 area_of_effect:
 - MT
 - ST
-range: point (120 feet)
+damage_type: Fire
 duration: special (Instant)
+level: 2
+name: Scorching Ray
+range: point (120 feet)
+school: None
+system: 5e

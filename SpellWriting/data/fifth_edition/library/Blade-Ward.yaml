@@ -1,8 +1,8 @@
-name: Blade Ward
-system: 5e
-level: 0
-school: Abjuration
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: concentration (1 minute)
+level: 0
+name: Blade Ward
+range: point (Self)
+school: Abjuration
+system: 5e

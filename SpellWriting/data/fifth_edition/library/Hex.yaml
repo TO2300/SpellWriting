@@ -1,9 +1,8 @@
-name: Hex
-system: 5e
-level: 1
-school: Enchantment
+area_of_effect: ST
 damage_type: Necrotic
-area_of_effect:
-- ST
-range: point (90 feet)
 duration: concentration (1 hour)
+level: 1
+name: Hex
+range: point (90 feet)
+school: Enchantment
+system: 5e

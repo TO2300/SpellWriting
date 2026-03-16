@@ -1,9 +1,8 @@
-name: Circle of Death
-system: 5e
-level: 6
-school: None
+area_of_effect: S
 damage_type: Necrotic
-area_of_effect:
-- S
-range: point (150 feet)
 duration: special (Instant)
+level: 6
+name: Circle of Death
+range: point (150 feet)
+school: None
+system: 5e

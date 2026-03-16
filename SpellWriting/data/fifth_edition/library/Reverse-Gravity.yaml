@@ -1,9 +1,8 @@
-name: Reverse Gravity
-system: 5e
-level: 7
-school: Transmutation
+area_of_effect: Y
 damage_type: None
-area_of_effect:
-- Y
-range: point (100 feet)
 duration: concentration (1 minute)
+level: 7
+name: Reverse Gravity
+range: point (100 feet)
+school: Transmutation
+system: 5e

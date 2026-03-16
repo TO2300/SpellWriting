@@ -1,14 +1,13 @@
-name: Glyph of Warding
-system: 5e
-level: 3
-school: Abjuration
+area_of_effect: S
 damage_type:
 - Acid
 - Cold
 - Fire
 - Lightning
 - Thunder
-area_of_effect:
-- S
-range: point (Touch)
 duration: special (Permanent)
+level: 3
+name: Glyph of Warding
+range: point (Touch)
+school: Abjuration
+system: 5e

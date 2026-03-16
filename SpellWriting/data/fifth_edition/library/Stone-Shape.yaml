@@ -1,8 +1,8 @@
-name: Stone Shape
-system: 5e
-level: 4
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: special (Instant)
+level: 4
+name: Stone Shape
+range: point (Touch)
+school: Transmutation
+system: 5e

@@ -1,9 +1,8 @@
-name: Shadow of Moil
-system: 5e
-level: 4
-school: None
+area_of_effect: S
 damage_type: Necrotic
-area_of_effect:
-- S
-range: point (Self)
 duration: concentration (1 minute)
+level: 4
+name: Shadow of Moil
+range: point (Self)
+school: None
+system: 5e

@@ -1,8 +1,8 @@
-name: Word of Recall
-system: 5e
-level: 6
-school: None
-damage_type: None
 area_of_effect: None
-range: point (5 feet)
+damage_type: None
 duration: special (Instant)
+level: 6
+name: Word of Recall
+range: point (5 feet)
+school: None
+system: 5e

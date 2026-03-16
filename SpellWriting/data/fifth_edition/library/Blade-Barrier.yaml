@@ -1,9 +1,8 @@
-name: Blade Barrier
-system: 5e
-level: 6
-school: None
+area_of_effect: W
 damage_type: Force
-area_of_effect:
-- W
-range: point (90 feet)
 duration: concentration (10 minute)
+level: 6
+name: Blade Barrier
+range: point (90 feet)
+school: None
+system: 5e

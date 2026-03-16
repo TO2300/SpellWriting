@@ -1,9 +1,8 @@
-name: Blindness/Deafness
-system: 5e
-level: 2
-school: Transmutation
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (120 feet)
 duration: timed (1 minute)
+level: 2
+name: Blindness/Deafness
+range: point (120 feet)
+school: Transmutation
+system: 5e

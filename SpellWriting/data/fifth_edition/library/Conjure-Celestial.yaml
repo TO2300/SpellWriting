@@ -1,9 +1,8 @@
-name: Conjure Celestial
-system: 5e
-level: 7
-school: None
+area_of_effect: Y
 damage_type: Radiant
-area_of_effect:
-- Y
-range: point (90 feet)
 duration: concentration (10 minute)
+level: 7
+name: Conjure Celestial
+range: point (90 feet)
+school: None
+system: 5e

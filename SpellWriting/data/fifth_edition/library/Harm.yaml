@@ -1,9 +1,8 @@
-name: Harm
-system: 5e
-level: 6
-school: None
+area_of_effect: ST
 damage_type: Necrotic
-area_of_effect:
-- ST
-range: point (60 feet)
 duration: special (Instant)
+level: 6
+name: Harm
+range: point (60 feet)
+school: None
+system: 5e

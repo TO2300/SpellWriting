@@ -1,9 +1,8 @@
-name: Rary's Telepathic Bond
-system: 5e
-level: 5
-school: Divination
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: point (30 feet)
 duration: timed (1 hour)
+level: 5
+name: Rary's Telepathic Bond
+range: point (30 feet)
+school: Divination
+system: 5e

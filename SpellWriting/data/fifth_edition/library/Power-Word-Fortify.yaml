@@ -1,9 +1,8 @@
-name: Power Word Fortify
-system: 5e
-level: 7
-school: Enchantment
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: point (60 feet)
 duration: special (Instant)
+level: 7
+name: Power Word Fortify
+range: point (60 feet)
+school: Enchantment
+system: 5e

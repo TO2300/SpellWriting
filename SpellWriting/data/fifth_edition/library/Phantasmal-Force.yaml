@@ -1,8 +1,8 @@
-name: Phantasmal Force
-system: 5e
-level: 2
-school: Illusion
-damage_type: Psychic
 area_of_effect: None
-range: point (60 feet)
+damage_type: Psychic
 duration: concentration (1 minute)
+level: 2
+name: Phantasmal Force
+range: point (60 feet)
+school: Illusion
+system: 5e

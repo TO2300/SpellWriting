@@ -15,7 +15,7 @@ from SpellWriting.data.fifth_edition import SpellData_5e
 class Glyph:
     
     def __init__(self,
-                 spelldata: data.SpellData = SpellData_5e.get_spell('Fireball'),
+                 spelldata: data.SpellData = SpellData_5e.get_spell('Fireball', source='offline'),
                  geometry_override: geometry.Leylines = None) -> typing.Self:
     
         self.spelldata = spelldata
@@ -26,7 +26,8 @@ class Glyph:
                 geometry.Founts(n=len(spelldata.collect_attributes())))
         
     
-    def plot(self):
+    def plot(self, legend: bool = False, legend_kwargs: dict = {}):
+        # TODO: Add thematic colors
         plt.figure()
         cmap = plt.get_cmap('tab20')
         
@@ -37,6 +38,7 @@ class Glyph:
             options = attr.options
             value = getattr(self.spelldata, attr.name)
             
+            if value is None: continue
             index = list(options).index(value)
         
             binary = self.leylines.necklace[index]
@@ -49,4 +51,5 @@ class Glyph:
         plt.plot(*self.leylines.founts, 'bo')
         plt.plot(*self.leylines.founts[:,0], 'ro')
         plt.title(self.spelldata.name)
-        plt.legend()
+        if legend:
+            plt.legend5(**legend_kwargs)

@@ -1,8 +1,8 @@
-name: Sending
-system: 5e
-level: 3
-school: Divination
-damage_type: None
 area_of_effect: None
-range: point (Unlimited)
+damage_type: None
 duration: special (Instant)
+level: 3
+name: Sending
+range: point (Unlimited)
+school: Divination
+system: 5e

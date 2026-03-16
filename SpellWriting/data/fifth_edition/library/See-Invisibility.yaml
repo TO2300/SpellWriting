@@ -1,8 +1,8 @@
-name: See Invisibility
-system: 5e
-level: 2
-school: Divination
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: timed (1 hour)
+level: 2
+name: See Invisibility
+range: point (Self)
+school: Divination
+system: 5e

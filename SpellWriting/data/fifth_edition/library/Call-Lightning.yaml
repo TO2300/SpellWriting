@@ -1,10 +1,10 @@
-name: Call Lightning
-system: 5e
-level: 3
-school: None
-damage_type: Lightning
 area_of_effect:
 - S
 - Y
-range: point (120 feet)
+damage_type: Lightning
 duration: concentration (10 minute)
+level: 3
+name: Call Lightning
+range: point (120 feet)
+school: None
+system: 5e

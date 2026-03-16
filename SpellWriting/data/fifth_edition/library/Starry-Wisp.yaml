@@ -1,9 +1,8 @@
-name: Starry Wisp
-system: 5e
-level: 0
-school: None
+area_of_effect: ST
 damage_type: Radiant
-area_of_effect:
-- ST
-range: point (60 feet)
 duration: special (Instant)
+level: 0
+name: Starry Wisp
+range: point (60 feet)
+school: None
+system: 5e

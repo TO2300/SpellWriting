@@ -1,8 +1,8 @@
-name: Shillelagh
-system: 5e
-level: 0
-school: Transmutation
-damage_type: Force
 area_of_effect: None
-range: point (Self)
+damage_type: Force
 duration: timed (1 minute)
+level: 0
+name: Shillelagh
+range: point (Self)
+school: Transmutation
+system: 5e

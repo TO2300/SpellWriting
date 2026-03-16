@@ -1,8 +1,8 @@
-name: Contact Other Plane
-system: 5e
-level: 5
-school: Divination
-damage_type: Psychic
 area_of_effect: None
-range: point (Self)
+damage_type: Psychic
 duration: timed (1 minute)
+level: 5
+name: Contact Other Plane
+range: point (Self)
+school: Divination
+system: 5e

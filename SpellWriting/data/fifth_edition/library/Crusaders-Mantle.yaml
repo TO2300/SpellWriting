@@ -1,9 +1,8 @@
-name: Crusader's Mantle
-system: 5e
-level: 3
-school: None
+area_of_effect: S
 damage_type: Radiant
-area_of_effect:
-- S
-range: emanation (30 feet)
 duration: concentration (1 minute)
+level: 3
+name: Crusader's Mantle
+range: emanation (30 feet)
+school: None
+system: 5e

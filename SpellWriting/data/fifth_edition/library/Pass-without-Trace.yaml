@@ -1,9 +1,8 @@
-name: Pass without Trace
-system: 5e
-level: 2
-school: Abjuration
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: emanation (30 feet)
 duration: concentration (1 hour)
+level: 2
+name: Pass without Trace
+range: emanation (30 feet)
+school: Abjuration
+system: 5e

@@ -1,9 +1,8 @@
-name: Vitriolic Sphere
-system: 5e
-level: 4
-school: None
+area_of_effect: S
 damage_type: Acid
-area_of_effect:
-- S
-range: point (150 feet)
 duration: special (Instant)
+level: 4
+name: Vitriolic Sphere
+range: point (150 feet)
+school: None
+system: 5e

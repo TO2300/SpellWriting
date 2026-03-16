@@ -1,8 +1,8 @@
-name: Wish
-system: 5e
-level: 9
-school: None
-damage_type: Necrotic
 area_of_effect: None
-range: point (Self)
+damage_type: Necrotic
 duration: special (Instant)
+level: 9
+name: Wish
+range: point (Self)
+school: None
+system: 5e

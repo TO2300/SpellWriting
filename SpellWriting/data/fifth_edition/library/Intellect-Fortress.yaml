@@ -1,8 +1,8 @@
-name: Intellect Fortress
-system: 5e
-level: 3
-school: Abjuration
-damage_type: None
 area_of_effect: None
-range: point (30 feet)
+damage_type: None
 duration: concentration (1 hour)
+level: 3
+name: Intellect Fortress
+range: point (30 feet)
+school: Abjuration
+system: 5e

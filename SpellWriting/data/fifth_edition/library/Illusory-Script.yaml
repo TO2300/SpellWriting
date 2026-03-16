@@ -1,8 +1,8 @@
-name: Illusory Script
-system: 5e
-level: 1
-school: Illusion
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: timed (10 day)
+level: 1
+name: Illusory Script
+range: point (Touch)
+school: Illusion
+system: 5e

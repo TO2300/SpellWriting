@@ -1,8 +1,8 @@
-name: Dream of the Blue Veil
-system: 5e
-level: 7
-school: None
-damage_type: None
 area_of_effect: None
-range: point (20 feet)
+damage_type: None
 duration: timed (6 hour)
+level: 7
+name: Dream of the Blue Veil
+range: point (20 feet)
+school: None
+system: 5e

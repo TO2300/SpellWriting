@@ -1,9 +1,8 @@
-name: Friends
-system: 5e
-level: 0
-school: Enchantment
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (10 feet)
 duration: concentration (1 minute)
+level: 0
+name: Friends
+range: point (10 feet)
+school: Enchantment
+system: 5e

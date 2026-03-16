@@ -1,9 +1,8 @@
-name: Power Word Pain
-system: 5e
-level: 7
-school: Enchantment
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (60 feet)
 duration: special (Instant)
+level: 7
+name: Power Word Pain
+range: point (60 feet)
+school: Enchantment
+system: 5e

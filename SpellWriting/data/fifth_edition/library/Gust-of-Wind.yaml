@@ -1,9 +1,8 @@
-name: Gust of Wind
-system: 5e
-level: 2
-school: None
+area_of_effect: L
 damage_type: None
-area_of_effect:
-- L
-range: point (Self)
 duration: concentration (1 minute)
+level: 2
+name: Gust of Wind
+range: point (Self)
+school: None
+system: 5e

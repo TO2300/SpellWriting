@@ -1,8 +1,8 @@
-name: Detect Evil and Good
-system: 5e
-level: 1
-school: Divination
-damage_type: None
 area_of_effect: None
-range: sphere (30 feet)
+damage_type: None
 duration: concentration (10 minute)
+level: 1
+name: Detect Evil and Good
+range: sphere (30 feet)
+school: Divination
+system: 5e

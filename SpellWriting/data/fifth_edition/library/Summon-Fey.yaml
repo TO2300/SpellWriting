@@ -1,8 +1,8 @@
-name: Summon Fey
-system: 5e
-level: 3
-school: None
-damage_type: None
 area_of_effect: None
-range: point (90 feet)
+damage_type: None
 duration: concentration (1 hour)
+level: 3
+name: Summon Fey
+range: point (90 feet)
+school: None
+system: 5e

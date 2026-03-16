@@ -1,9 +1,8 @@
-name: Eyebite
-system: 5e
-level: 6
-school: None
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (Self)
 duration: concentration (1 minute)
+level: 6
+name: Eyebite
+range: point (Self)
+school: None
+system: 5e

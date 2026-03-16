@@ -1,8 +1,8 @@
-name: Gentle Repose
-system: 5e
-level: 2
-school: None
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: timed (10 day)
+level: 2
+name: Gentle Repose
+range: point (Touch)
+school: None
+system: 5e

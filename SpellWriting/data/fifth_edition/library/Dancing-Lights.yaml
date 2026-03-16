@@ -1,8 +1,8 @@
-name: Dancing Lights
-system: 5e
-level: 0
-school: Illusion
-damage_type: None
 area_of_effect: None
-range: point (120 feet)
+damage_type: None
 duration: concentration (1 minute)
+level: 0
+name: Dancing Lights
+range: point (120 feet)
+school: Illusion
+system: 5e

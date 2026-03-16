@@ -1,9 +1,8 @@
-name: Yolande's Regal Presence
-system: 5e
-level: 5
-school: Enchantment
+area_of_effect: S
 damage_type: Psychic
-area_of_effect:
-- S
-range: emanation (10 feet)
 duration: concentration (1 minute)
+level: 5
+name: Yolande's Regal Presence
+range: emanation (10 feet)
+school: Enchantment
+system: 5e

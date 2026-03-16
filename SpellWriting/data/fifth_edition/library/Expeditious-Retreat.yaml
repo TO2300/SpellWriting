@@ -1,8 +1,8 @@
-name: Expeditious Retreat
-system: 5e
-level: 1
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: concentration (10 minute)
+level: 1
+name: Expeditious Retreat
+range: point (Self)
+school: Transmutation
+system: 5e

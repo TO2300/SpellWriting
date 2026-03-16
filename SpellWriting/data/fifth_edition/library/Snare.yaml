@@ -1,9 +1,8 @@
-name: Snare
-system: 5e
-level: 1
-school: Abjuration
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (Touch)
 duration: timed (8 hour)
+level: 1
+name: Snare
+range: point (Touch)
+school: Abjuration
+system: 5e

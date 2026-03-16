@@ -1,9 +1,8 @@
-name: Poison Spray
-system: 5e
-level: 0
-school: None
+area_of_effect: ST
 damage_type: Poison
-area_of_effect:
-- ST
-range: point (30 feet)
 duration: special (Instant)
+level: 0
+name: Poison Spray
+range: point (30 feet)
+school: None
+system: 5e

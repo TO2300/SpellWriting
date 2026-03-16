@@ -1,8 +1,8 @@
-name: Mighty Fortress
-system: 5e
-level: 8
-school: None
-damage_type: None
 area_of_effect: None
-range: point (1 miles)
+damage_type: None
 duration: special (Instant)
+level: 8
+name: Mighty Fortress
+range: point (1 miles)
+school: None
+system: 5e

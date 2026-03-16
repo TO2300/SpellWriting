@@ -1,8 +1,8 @@
-name: Time Stop
-system: 5e
-level: 9
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: special (Instant)
+level: 9
+name: Time Stop
+range: point (Self)
+school: Transmutation
+system: 5e

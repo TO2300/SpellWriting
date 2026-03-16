@@ -1,9 +1,8 @@
-name: Lightning Arrow
-system: 5e
-level: 3
-school: Transmutation
+area_of_effect: S
 damage_type: Lightning
-area_of_effect:
-- S
-range: point (Self)
 duration: special (Instant)
+level: 3
+name: Lightning Arrow
+range: point (Self)
+school: Transmutation
+system: 5e

@@ -1,9 +1,8 @@
-name: Lesser Restoration
-system: 5e
-level: 2
-school: Abjuration
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (Touch)
 duration: special (Instant)
+level: 2
+name: Lesser Restoration
+range: point (Touch)
+school: Abjuration
+system: 5e

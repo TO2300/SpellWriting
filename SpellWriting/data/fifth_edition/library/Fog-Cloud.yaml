@@ -1,9 +1,8 @@
-name: Fog Cloud
-system: 5e
-level: 1
-school: None
+area_of_effect: S
 damage_type: None
-area_of_effect:
-- S
-range: point (120 feet)
 duration: concentration (1 hour)
+level: 1
+name: Fog Cloud
+range: point (120 feet)
+school: None
+system: 5e

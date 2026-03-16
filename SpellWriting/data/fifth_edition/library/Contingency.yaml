@@ -1,8 +1,8 @@
-name: Contingency
-system: 5e
-level: 6
-school: Abjuration
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: timed (10 day)
+level: 6
+name: Contingency
+range: point (Self)
+school: Abjuration
+system: 5e

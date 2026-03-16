@@ -1,8 +1,8 @@
-name: Glibness
-system: 5e
-level: 8
-school: Enchantment
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: timed (1 hour)
+level: 8
+name: Glibness
+range: point (Self)
+school: Enchantment
+system: 5e

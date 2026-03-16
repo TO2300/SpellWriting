@@ -1,9 +1,8 @@
-name: Death Ward
-system: 5e
-level: 4
-school: Abjuration
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (Touch)
 duration: timed (8 hour)
+level: 4
+name: Death Ward
+range: point (Touch)
+school: Abjuration
+system: 5e

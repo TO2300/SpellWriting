@@ -1,8 +1,8 @@
-name: Mending
-system: 5e
-level: 0
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: special (Instant)
+level: 0
+name: Mending
+range: point (Touch)
+school: Transmutation
+system: 5e

@@ -1,9 +1,8 @@
-name: Maximilian's Earthen Grasp
-system: 5e
-level: 2
-school: Transmutation
+area_of_effect: ST
 damage_type: Bludgeoning
-area_of_effect:
-- ST
-range: point (30 feet)
 duration: concentration (1 minute)
+level: 2
+name: Maximilian's Earthen Grasp
+range: point (30 feet)
+school: Transmutation
+system: 5e

@@ -1,8 +1,8 @@
-name: Etherealness
-system: 5e
-level: 7
-school: None
-damage_type: Force
 area_of_effect: None
-range: point (Self)
+damage_type: Force
 duration: timed (8 hour)
+level: 7
+name: Etherealness
+range: point (Self)
+school: None
+system: 5e

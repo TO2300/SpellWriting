@@ -1,9 +1,8 @@
-name: Move Earth
-system: 5e
-level: 6
-school: Transmutation
+area_of_effect: Q
 damage_type: None
-area_of_effect:
-- Q
-range: point (120 feet)
 duration: concentration (2 hour)
+level: 6
+name: Move Earth
+range: point (120 feet)
+school: Transmutation
+system: 5e

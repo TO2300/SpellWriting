@@ -1,10 +1,10 @@
-name: Mass Cure Wounds
-system: 5e
-level: 5
-school: Abjuration
-damage_type: None
 area_of_effect:
 - MT
 - S
-range: point (60 feet)
+damage_type: None
 duration: special (Instant)
+level: 5
+name: Mass Cure Wounds
+range: point (60 feet)
+school: Abjuration
+system: 5e

@@ -1,8 +1,8 @@
-name: Arcane Vigor
-system: 5e
-level: 2
-school: Abjuration
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: special (Instant)
+level: 2
+name: Arcane Vigor
+range: point (Self)
+school: Abjuration
+system: 5e

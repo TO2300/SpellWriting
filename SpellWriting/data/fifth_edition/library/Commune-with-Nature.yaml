@@ -1,8 +1,8 @@
-name: Commune with Nature
-system: 5e
-level: 5
-school: Divination
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: timed (1 minute)
+level: 5
+name: Commune with Nature
+range: point (Self)
+school: Divination
+system: 5e

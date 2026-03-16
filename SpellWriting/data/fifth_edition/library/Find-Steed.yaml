@@ -1,8 +1,8 @@
-name: Find Steed
-system: 5e
-level: 2
-school: None
-damage_type: None
 area_of_effect: None
-range: point (30 feet)
+damage_type: None
 duration: special (Instant)
+level: 2
+name: Find Steed
+range: point (30 feet)
+school: None
+system: 5e

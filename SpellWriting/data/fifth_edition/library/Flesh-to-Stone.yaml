@@ -1,9 +1,8 @@
-name: Flesh to Stone
-system: 5e
-level: 6
-school: Transmutation
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (60 feet)
 duration: concentration (1 minute)
+level: 6
+name: Flesh to Stone
+range: point (60 feet)
+school: Transmutation
+system: 5e

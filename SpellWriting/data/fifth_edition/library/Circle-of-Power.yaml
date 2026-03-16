@@ -1,9 +1,8 @@
-name: Circle of Power
-system: 5e
-level: 5
-school: Abjuration
+area_of_effect: S
 damage_type: None
-area_of_effect:
-- S
-range: emanation (30 feet)
 duration: concentration (10 minute)
+level: 5
+name: Circle of Power
+range: emanation (30 feet)
+school: Abjuration
+system: 5e

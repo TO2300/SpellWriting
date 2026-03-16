@@ -1,9 +1,8 @@
-name: Sanctuary
-system: 5e
-level: 1
-school: Abjuration
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (30 feet)
 duration: timed (1 minute)
+level: 1
+name: Sanctuary
+range: point (30 feet)
+school: Abjuration
+system: 5e

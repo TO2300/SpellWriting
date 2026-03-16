@@ -1,8 +1,8 @@
-name: Clone
-system: 5e
-level: 8
-school: None
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: special (Instant)
+level: 8
+name: Clone
+range: point (Touch)
+school: None
+system: 5e

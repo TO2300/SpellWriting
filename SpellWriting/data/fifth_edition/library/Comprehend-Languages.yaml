@@ -1,8 +1,8 @@
-name: Comprehend Languages
-system: 5e
-level: 1
-school: Divination
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: timed (1 hour)
+level: 1
+name: Comprehend Languages
+range: point (Self)
+school: Divination
+system: 5e

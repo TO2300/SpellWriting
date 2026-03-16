@@ -1,9 +1,8 @@
-name: Spare the Dying
-system: 5e
-level: 0
-school: None
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (15 feet)
 duration: special (Instant)
+level: 0
+name: Spare the Dying
+range: point (15 feet)
+school: None
+system: 5e

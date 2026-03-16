@@ -1,9 +1,8 @@
-name: Crown of Madness
-system: 5e
-level: 2
-school: Enchantment
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (120 feet)
 duration: concentration (1 minute)
+level: 2
+name: Crown of Madness
+range: point (120 feet)
+school: Enchantment
+system: 5e

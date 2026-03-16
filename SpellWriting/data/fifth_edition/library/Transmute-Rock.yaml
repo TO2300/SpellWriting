@@ -1,9 +1,8 @@
-name: Transmute Rock
-system: 5e
-level: 5
-school: Transmutation
+area_of_effect: C
 damage_type: Bludgeoning
-area_of_effect:
-- C
-range: point (120 feet)
 duration: special (Permanent)
+level: 5
+name: Transmute Rock
+range: point (120 feet)
+school: Transmutation
+system: 5e

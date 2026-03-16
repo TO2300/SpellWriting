@@ -1,7 +1,4 @@
-name: Sorcerous Burst
-system: 5e
-level: 0
-school: None
+area_of_effect: ST
 damage_type:
 - Acid
 - Cold
@@ -10,7 +7,9 @@ damage_type:
 - Poison
 - Psychic
 - Thunder
-area_of_effect:
-- ST
-range: point (120 feet)
 duration: special (Instant)
+level: 0
+name: Sorcerous Burst
+range: point (120 feet)
+school: None
+system: 5e

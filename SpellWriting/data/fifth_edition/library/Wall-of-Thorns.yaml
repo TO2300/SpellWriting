@@ -1,11 +1,10 @@
-name: Wall of Thorns
-system: 5e
-level: 6
-school: None
+area_of_effect: W
 damage_type:
 - Piercing
 - Slashing
-area_of_effect:
-- W
-range: point (120 feet)
 duration: concentration (10 minute)
+level: 6
+name: Wall of Thorns
+range: point (120 feet)
+school: None
+system: 5e

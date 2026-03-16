@@ -1,9 +1,8 @@
-name: Finger of Death
-system: 5e
-level: 7
-school: None
+area_of_effect: ST
 damage_type: Necrotic
-area_of_effect:
-- ST
-range: point (60 feet)
 duration: special (Instant)
+level: 7
+name: Finger of Death
+range: point (60 feet)
+school: None
+system: 5e

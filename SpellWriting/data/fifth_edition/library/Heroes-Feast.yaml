@@ -1,10 +1,10 @@
-name: Heroes' Feast
-system: 5e
-level: 6
-school: None
-damage_type: None
 area_of_effect:
 - C
 - MT
-range: cube (10 feet)
+damage_type: None
 duration: special (Instant)
+level: 6
+name: Heroes' Feast
+range: cube (10 feet)
+school: None
+system: 5e

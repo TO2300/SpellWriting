@@ -1,9 +1,8 @@
-name: True Polymorph
-system: 5e
-level: 9
-school: Transmutation
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (30 feet)
 duration: concentration (1 hour)
+level: 9
+name: True Polymorph
+range: point (30 feet)
+school: Transmutation
+system: 5e

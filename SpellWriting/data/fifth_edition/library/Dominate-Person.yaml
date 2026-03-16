@@ -1,9 +1,8 @@
-name: Dominate Person
-system: 5e
-level: 5
-school: Enchantment
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (60 feet)
 duration: concentration (1 minute)
+level: 5
+name: Dominate Person
+range: point (60 feet)
+school: Enchantment
+system: 5e

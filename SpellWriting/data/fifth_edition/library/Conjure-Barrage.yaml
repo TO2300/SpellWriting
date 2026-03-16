@@ -1,9 +1,8 @@
-name: Conjure Barrage
-system: 5e
-level: 3
-school: None
+area_of_effect: N
 damage_type: Force
-area_of_effect:
-- N
-range: cone (60 feet)
 duration: special (Instant)
+level: 3
+name: Conjure Barrage
+range: cone (60 feet)
+school: None
+system: 5e

@@ -1,9 +1,8 @@
-name: Silence
-system: 5e
-level: 2
-school: Illusion
+area_of_effect: S
 damage_type: None
-area_of_effect:
-- S
-range: point (120 feet)
 duration: concentration (10 minute)
+level: 2
+name: Silence
+range: point (120 feet)
+school: Illusion
+system: 5e

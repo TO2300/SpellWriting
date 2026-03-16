@@ -1,8 +1,8 @@
-name: Arcane Eye
-system: 5e
-level: 4
-school: Divination
-damage_type: None
 area_of_effect: None
-range: point (30 feet)
+damage_type: None
 duration: concentration (1 hour)
+level: 4
+name: Arcane Eye
+range: point (30 feet)
+school: Divination
+system: 5e

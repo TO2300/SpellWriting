@@ -1,9 +1,8 @@
-name: Melf's Minute Meteors
-system: 5e
-level: 3
-school: None
+area_of_effect: S
 damage_type: Fire
-area_of_effect:
-- S
-range: point (Self)
 duration: concentration (10 minute)
+level: 3
+name: Melf's Minute Meteors
+range: point (Self)
+school: None
+system: 5e

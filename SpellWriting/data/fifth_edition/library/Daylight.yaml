@@ -1,9 +1,8 @@
-name: Daylight
-system: 5e
-level: 3
-school: None
+area_of_effect: S
 damage_type: None
-area_of_effect:
-- S
-range: point (60 feet)
 duration: timed (1 hour)
+level: 3
+name: Daylight
+range: point (60 feet)
+school: None
+system: 5e

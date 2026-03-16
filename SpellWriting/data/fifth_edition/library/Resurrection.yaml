@@ -1,8 +1,8 @@
-name: Resurrection
-system: 5e
-level: 7
-school: None
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: special (Instant)
+level: 7
+name: Resurrection
+range: point (Touch)
+school: None
+system: 5e

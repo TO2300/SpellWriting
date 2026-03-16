@@ -1,8 +1,8 @@
-name: Find Traps
-system: 5e
-level: 2
-school: Divination
-damage_type: None
 area_of_effect: None
-range: point (120 feet)
+damage_type: None
 duration: special (Instant)
+level: 2
+name: Find Traps
+range: point (120 feet)
+school: Divination
+system: 5e

@@ -1,8 +1,8 @@
-name: Phantom Steed
-system: 5e
-level: 3
-school: Illusion
-damage_type: None
 area_of_effect: None
-range: point (30 feet)
+damage_type: None
 duration: timed (1 hour)
+level: 3
+name: Phantom Steed
+range: point (30 feet)
+school: Illusion
+system: 5e

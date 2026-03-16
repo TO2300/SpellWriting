@@ -1,9 +1,8 @@
-name: Watery Sphere
-system: 5e
-level: 4
-school: None
+area_of_effect: S
 damage_type: None
-area_of_effect:
-- S
-range: point (90 feet)
 duration: concentration (1 minute)
+level: 4
+name: Watery Sphere
+range: point (90 feet)
+school: None
+system: 5e

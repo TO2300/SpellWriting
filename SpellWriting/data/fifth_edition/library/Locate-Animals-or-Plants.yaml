@@ -1,8 +1,8 @@
-name: Locate Animals or Plants
-system: 5e
-level: 2
-school: Divination
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: special (Instant)
+level: 2
+name: Locate Animals or Plants
+range: point (Self)
+school: Divination
+system: 5e

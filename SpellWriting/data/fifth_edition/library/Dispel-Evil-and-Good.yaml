@@ -1,9 +1,8 @@
-name: Dispel Evil and Good
-system: 5e
-level: 5
-school: Abjuration
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (Self)
 duration: concentration (1 minute)
+level: 5
+name: Dispel Evil and Good
+range: point (Self)
+school: Abjuration
+system: 5e

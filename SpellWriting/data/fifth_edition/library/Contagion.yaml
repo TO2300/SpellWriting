@@ -1,9 +1,8 @@
-name: Contagion
-system: 5e
-level: 5
-school: None
+area_of_effect: ST
 damage_type: Necrotic
-area_of_effect:
-- ST
-range: point (Touch)
 duration: timed (7 day)
+level: 5
+name: Contagion
+range: point (Touch)
+school: None
+system: 5e

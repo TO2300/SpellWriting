@@ -1,8 +1,8 @@
-name: Meld into Stone
-system: 5e
-level: 3
-school: Transmutation
-damage_type: Force
 area_of_effect: None
-range: point (Touch)
+damage_type: Force
 duration: timed (8 hour)
+level: 3
+name: Meld into Stone
+range: point (Touch)
+school: Transmutation
+system: 5e

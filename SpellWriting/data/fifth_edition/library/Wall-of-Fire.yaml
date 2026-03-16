@@ -1,9 +1,8 @@
-name: Wall of Fire
-system: 5e
-level: 4
-school: None
+area_of_effect: W
 damage_type: Fire
-area_of_effect:
-- W
-range: point (120 feet)
 duration: concentration (1 minute)
+level: 4
+name: Wall of Fire
+range: point (120 feet)
+school: None
+system: 5e

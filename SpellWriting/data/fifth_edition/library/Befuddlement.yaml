@@ -1,9 +1,8 @@
-name: Befuddlement
-system: 5e
-level: 8
-school: Enchantment
+area_of_effect: ST
 damage_type: Psychic
-area_of_effect:
-- ST
-range: point (150 feet)
 duration: special (Instant)
+level: 8
+name: Befuddlement
+range: point (150 feet)
+school: Enchantment
+system: 5e

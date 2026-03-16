@@ -1,9 +1,8 @@
-name: True Resurrection
-system: 5e
-level: 9
-school: None
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (Touch)
 duration: special (Instant)
+level: 9
+name: True Resurrection
+range: point (Touch)
+school: None
+system: 5e

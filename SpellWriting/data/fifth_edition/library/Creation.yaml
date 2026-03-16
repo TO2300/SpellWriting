@@ -1,8 +1,8 @@
-name: Creation
-system: 5e
-level: 5
-school: Illusion
-damage_type: None
 area_of_effect: None
-range: point (30 feet)
+damage_type: None
 duration: special (Special)
+level: 5
+name: Creation
+range: point (30 feet)
+school: Illusion
+system: 5e

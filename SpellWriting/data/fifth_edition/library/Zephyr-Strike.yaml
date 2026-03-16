@@ -1,8 +1,8 @@
-name: Zephyr Strike
-system: 5e
-level: 1
-school: Transmutation
-damage_type: Force
 area_of_effect: None
-range: point (Self)
+damage_type: Force
 duration: concentration (1 minute)
+level: 1
+name: Zephyr Strike
+range: point (Self)
+school: Transmutation
+system: 5e

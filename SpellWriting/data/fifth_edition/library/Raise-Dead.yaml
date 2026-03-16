@@ -1,8 +1,8 @@
-name: Raise Dead
-system: 5e
-level: 5
-school: None
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: special (Instant)
+level: 5
+name: Raise Dead
+range: point (Touch)
+school: None
+system: 5e

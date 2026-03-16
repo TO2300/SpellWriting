@@ -1,9 +1,8 @@
-name: Whirlwind
-system: 5e
-level: 7
-school: None
+area_of_effect: Y
 damage_type: Bludgeoning
-area_of_effect:
-- Y
-range: point (300 feet)
 duration: concentration (1 minute)
+level: 7
+name: Whirlwind
+range: point (300 feet)
+school: None
+system: 5e

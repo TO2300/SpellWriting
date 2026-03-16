@@ -1,10 +1,10 @@
-name: Magic Missile
-system: 5e
-level: 1
-school: None
-damage_type: Force
 area_of_effect:
 - MT
 - ST
-range: point (120 feet)
+damage_type: Force
 duration: special (Instant)
+level: 1
+name: Magic Missile
+range: point (120 feet)
+school: None
+system: 5e

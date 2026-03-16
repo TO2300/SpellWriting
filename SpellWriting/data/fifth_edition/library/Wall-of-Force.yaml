@@ -1,9 +1,8 @@
-name: Wall of Force
-system: 5e
-level: 5
-school: None
+area_of_effect: W
 damage_type: None
-area_of_effect:
-- W
-range: point (120 feet)
 duration: concentration (10 minute)
+level: 5
+name: Wall of Force
+range: point (120 feet)
+school: None
+system: 5e

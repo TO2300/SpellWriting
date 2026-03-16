@@ -1,8 +1,8 @@
-name: Arcane Gate
-system: 5e
-level: 6
-school: None
-damage_type: None
 area_of_effect: None
-range: point (500 feet)
+damage_type: None
 duration: concentration (10 minute)
+level: 6
+name: Arcane Gate
+range: point (500 feet)
+school: None
+system: 5e

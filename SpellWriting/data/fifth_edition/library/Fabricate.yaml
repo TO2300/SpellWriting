@@ -1,8 +1,8 @@
-name: Fabricate
-system: 5e
-level: 4
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: point (120 feet)
+damage_type: None
 duration: special (Instant)
+level: 4
+name: Fabricate
+range: point (120 feet)
+school: Transmutation
+system: 5e

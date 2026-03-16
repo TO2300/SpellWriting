@@ -1,7 +1,4 @@
-name: Illusory Dragon
-system: 5e
-level: 8
-school: Illusion
+area_of_effect: N
 damage_type:
 - Acid
 - Cold
@@ -9,7 +6,9 @@ damage_type:
 - Lightning
 - Necrotic
 - Poison
-area_of_effect:
-- N
-range: point (120 feet)
 duration: concentration (1 minute)
+level: 8
+name: Illusory Dragon
+range: point (120 feet)
+school: Illusion
+system: 5e

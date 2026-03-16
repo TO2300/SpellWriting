@@ -1,8 +1,8 @@
-name: Summon Fiend
-system: 5e
-level: 6
-school: None
-damage_type: None
 area_of_effect: None
-range: point (90 feet)
+damage_type: None
 duration: concentration (1 hour)
+level: 6
+name: Summon Fiend
+range: point (90 feet)
+school: None
+system: 5e

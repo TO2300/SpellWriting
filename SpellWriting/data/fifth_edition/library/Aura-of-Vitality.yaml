@@ -1,9 +1,8 @@
-name: Aura of Vitality
-system: 5e
-level: 3
-school: Abjuration
+area_of_effect: S
 damage_type: None
-area_of_effect:
-- S
-range: emanation (30 feet)
 duration: concentration (1 minute)
+level: 3
+name: Aura of Vitality
+range: emanation (30 feet)
+school: Abjuration
+system: 5e

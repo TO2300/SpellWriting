@@ -1,8 +1,8 @@
-name: Clairvoyance
-system: 5e
-level: 3
-school: Divination
-damage_type: None
 area_of_effect: None
-range: point (1 miles)
+damage_type: None
 duration: concentration (10 minute)
+level: 3
+name: Clairvoyance
+range: point (1 miles)
+school: Divination
+system: 5e

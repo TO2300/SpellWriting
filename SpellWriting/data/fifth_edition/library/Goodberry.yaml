@@ -1,8 +1,8 @@
-name: Goodberry
-system: 5e
-level: 1
-school: None
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: timed (24 hour)
+level: 1
+name: Goodberry
+range: point (Touch)
+school: None
+system: 5e

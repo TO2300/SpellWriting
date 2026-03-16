@@ -1,8 +1,8 @@
-name: Magic Jar
-system: 5e
-level: 6
-school: None
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: special (Permanent)
+level: 6
+name: Magic Jar
+range: point (Self)
+school: None
+system: 5e

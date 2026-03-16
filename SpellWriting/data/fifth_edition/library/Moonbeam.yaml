@@ -1,9 +1,8 @@
-name: Moonbeam
-system: 5e
-level: 2
-school: None
+area_of_effect: Y
 damage_type: Radiant
-area_of_effect:
-- Y
-range: point (120 feet)
 duration: concentration (1 minute)
+level: 2
+name: Moonbeam
+range: point (120 feet)
+school: None
+system: 5e

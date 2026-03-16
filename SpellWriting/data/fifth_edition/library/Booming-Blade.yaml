@@ -1,9 +1,8 @@
-name: Booming Blade
-system: 5e
-level: 0
-school: None
+area_of_effect: ST
 damage_type: Thunder
-area_of_effect:
-- ST
-range: radius (5 feet)
 duration: timed (1 round)
+level: 0
+name: Booming Blade
+range: radius (5 feet)
+school: None
+system: 5e

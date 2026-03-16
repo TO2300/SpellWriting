@@ -1,8 +1,8 @@
-name: Light
-system: 5e
-level: 0
-school: None
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: timed (1 hour)
+level: 0
+name: Light
+range: point (Touch)
+school: None
+system: 5e

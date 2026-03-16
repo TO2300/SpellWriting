@@ -1,9 +1,8 @@
-name: Conjure Volley
-system: 5e
-level: 5
-school: None
+area_of_effect: Y
 damage_type: Force
-area_of_effect:
-- Y
-range: point (150 feet)
 duration: special (Instant)
+level: 5
+name: Conjure Volley
+range: point (150 feet)
+school: None
+system: 5e

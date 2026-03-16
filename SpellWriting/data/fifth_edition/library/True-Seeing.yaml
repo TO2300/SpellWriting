@@ -1,8 +1,8 @@
-name: True Seeing
-system: 5e
-level: 6
-school: Divination
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: timed (1 hour)
+level: 6
+name: True Seeing
+range: point (Touch)
+school: Divination
+system: 5e

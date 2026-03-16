@@ -1,9 +1,8 @@
-name: Cloudkill
-system: 5e
-level: 5
-school: None
+area_of_effect: S
 damage_type: Poison
-area_of_effect:
-- S
-range: point (120 feet)
 duration: concentration (10 minute)
+level: 5
+name: Cloudkill
+range: point (120 feet)
+school: None
+system: 5e

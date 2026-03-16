@@ -1,11 +1,10 @@
-name: Flame Strike
-system: 5e
-level: 5
-school: None
+area_of_effect: Y
 damage_type:
 - Fire
 - Radiant
-area_of_effect:
-- Y
-range: point (60 feet)
 duration: special (Instant)
+level: 5
+name: Flame Strike
+range: point (60 feet)
+school: None
+system: 5e

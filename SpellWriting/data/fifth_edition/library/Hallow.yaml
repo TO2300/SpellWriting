@@ -1,8 +1,8 @@
-name: Hallow
-system: 5e
-level: 5
-school: Abjuration
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: special (Permanent)
+level: 5
+name: Hallow
+range: point (Touch)
+school: Abjuration
+system: 5e

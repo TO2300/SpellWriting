@@ -1,9 +1,8 @@
-name: Enemies Abound
-system: 5e
-level: 3
-school: Enchantment
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (120 feet)
 duration: concentration (1 minute)
+level: 3
+name: Enemies Abound
+range: point (120 feet)
+school: Enchantment
+system: 5e

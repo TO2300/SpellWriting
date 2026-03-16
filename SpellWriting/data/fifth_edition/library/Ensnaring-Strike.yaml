@@ -1,8 +1,8 @@
-name: Ensnaring Strike
-system: 5e
-level: 1
-school: None
-damage_type: Piercing
 area_of_effect: None
-range: point (Self)
+damage_type: Piercing
 duration: concentration (1 minute)
+level: 1
+name: Ensnaring Strike
+range: point (Self)
+school: None
+system: 5e

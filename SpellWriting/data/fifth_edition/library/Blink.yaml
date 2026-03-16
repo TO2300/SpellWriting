@@ -1,8 +1,8 @@
-name: Blink
-system: 5e
-level: 3
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: timed (1 minute)
+level: 3
+name: Blink
+range: point (Self)
+school: Transmutation
+system: 5e

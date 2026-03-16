@@ -1,9 +1,8 @@
-name: Scatter
-system: 5e
-level: 6
-school: None
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: point (30 feet)
 duration: special (Instant)
+level: 6
+name: Scatter
+range: point (30 feet)
+school: None
+system: 5e

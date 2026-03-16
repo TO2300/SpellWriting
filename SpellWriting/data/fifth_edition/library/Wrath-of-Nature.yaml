@@ -1,12 +1,12 @@
-name: Wrath of Nature
-system: 5e
-level: 5
-school: None
-damage_type:
-- Bludgeoning
-- Slashing
 area_of_effect:
 - C
 - ST
-range: point (120 feet)
+damage_type:
+- Bludgeoning
+- Slashing
 duration: concentration (1 minute)
+level: 5
+name: Wrath of Nature
+range: point (120 feet)
+school: None
+system: 5e

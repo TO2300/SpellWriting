@@ -1,9 +1,8 @@
-name: Otiluke's Resilient Sphere
-system: 5e
-level: 4
-school: Abjuration
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (30 feet)
 duration: concentration (1 minute)
+level: 4
+name: Otiluke's Resilient Sphere
+range: point (30 feet)
+school: Abjuration
+system: 5e

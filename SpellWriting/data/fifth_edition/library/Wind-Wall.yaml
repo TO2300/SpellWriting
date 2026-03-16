@@ -1,9 +1,8 @@
-name: Wind Wall
-system: 5e
-level: 3
-school: None
+area_of_effect: W
 damage_type: Bludgeoning
-area_of_effect:
-- W
-range: point (120 feet)
 duration: concentration (1 minute)
+level: 3
+name: Wind Wall
+range: point (120 feet)
+school: None
+system: 5e

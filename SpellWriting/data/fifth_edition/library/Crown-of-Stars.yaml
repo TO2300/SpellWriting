@@ -1,9 +1,8 @@
-name: Crown of Stars
-system: 5e
-level: 7
-school: None
+area_of_effect: ST
 damage_type: Radiant
-area_of_effect:
-- ST
-range: point (Self)
 duration: timed (1 hour)
+level: 7
+name: Crown of Stars
+range: point (Self)
+school: None
+system: 5e

@@ -1,9 +1,8 @@
-name: Aganazzar's Scorcher
-system: 5e
-level: 2
-school: None
+area_of_effect: L
 damage_type: Fire
-area_of_effect:
-- L
-range: point (30 feet)
 duration: special (Instant)
+level: 2
+name: Aganazzar's Scorcher
+range: point (30 feet)
+school: None
+system: 5e

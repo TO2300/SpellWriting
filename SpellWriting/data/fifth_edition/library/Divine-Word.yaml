@@ -1,9 +1,8 @@
-name: Divine Word
-system: 5e
-level: 7
-school: None
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: point (30 feet)
 duration: special (Instant)
+level: 7
+name: Divine Word
+range: point (30 feet)
+school: None
+system: 5e

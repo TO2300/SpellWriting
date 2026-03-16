@@ -1,8 +1,8 @@
-name: Dust Devil
-system: 5e
-level: 2
-school: None
-damage_type: Bludgeoning
 area_of_effect: None
-range: point (60 feet)
+damage_type: Bludgeoning
 duration: concentration (1 minute)
+level: 2
+name: Dust Devil
+range: point (60 feet)
+school: None
+system: 5e

@@ -1,7 +1,4 @@
-name: Prismatic Wall
-system: 5e
-level: 9
-school: Abjuration
+area_of_effect: W
 damage_type:
 - Acid
 - Cold
@@ -9,7 +6,9 @@ damage_type:
 - Force
 - Lightning
 - Poison
-area_of_effect:
-- W
-range: point (60 feet)
 duration: timed (10 minute)
+level: 9
+name: Prismatic Wall
+range: point (60 feet)
+school: Abjuration
+system: 5e

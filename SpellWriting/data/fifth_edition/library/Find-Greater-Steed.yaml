@@ -1,8 +1,8 @@
-name: Find Greater Steed
-system: 5e
-level: 4
-school: None
-damage_type: None
 area_of_effect: None
-range: point (30 feet)
+damage_type: None
 duration: special (Instant)
+level: 4
+name: Find Greater Steed
+range: point (30 feet)
+school: None
+system: 5e

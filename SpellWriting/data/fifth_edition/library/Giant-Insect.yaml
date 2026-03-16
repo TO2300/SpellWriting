@@ -1,8 +1,8 @@
-name: Giant Insect
-system: 5e
-level: 4
-school: None
-damage_type: None
 area_of_effect: None
-range: point (60 feet)
+damage_type: None
 duration: concentration (10 minute)
+level: 4
+name: Giant Insect
+range: point (60 feet)
+school: None
+system: 5e

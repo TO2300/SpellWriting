@@ -1,9 +1,8 @@
-name: Disintegrate
-system: 5e
-level: 6
-school: Transmutation
+area_of_effect: ST
 damage_type: Force
-area_of_effect:
-- ST
-range: point (60 feet)
 duration: special (Instant)
+level: 6
+name: Disintegrate
+range: point (60 feet)
+school: Transmutation
+system: 5e

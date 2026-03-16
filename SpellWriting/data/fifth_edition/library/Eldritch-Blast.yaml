@@ -1,10 +1,10 @@
-name: Eldritch Blast
-system: 5e
-level: 0
-school: None
-damage_type: Force
 area_of_effect:
 - MT
 - ST
-range: point (120 feet)
+damage_type: Force
 duration: special (Instant)
+level: 0
+name: Eldritch Blast
+range: point (120 feet)
+school: None
+system: 5e

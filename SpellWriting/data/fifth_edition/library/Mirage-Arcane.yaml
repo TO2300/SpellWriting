@@ -1,8 +1,8 @@
-name: Mirage Arcane
-system: 5e
-level: 7
-school: Illusion
-damage_type: None
 area_of_effect: None
-range: point (Sight)
+damage_type: None
 duration: timed (10 day)
+level: 7
+name: Mirage Arcane
+range: point (Sight)
+school: Illusion
+system: 5e

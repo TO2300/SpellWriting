@@ -1,9 +1,8 @@
-name: Compulsion
-system: 5e
-level: 4
-school: Enchantment
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: point (30 feet)
 duration: concentration (1 minute)
+level: 4
+name: Compulsion
+range: point (30 feet)
+school: Enchantment
+system: 5e

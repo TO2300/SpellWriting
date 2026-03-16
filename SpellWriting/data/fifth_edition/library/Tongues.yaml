@@ -1,9 +1,8 @@
-name: Tongues
-system: 5e
-level: 3
-school: Divination
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (Touch)
 duration: timed (1 hour)
+level: 3
+name: Tongues
+range: point (Touch)
+school: Divination
+system: 5e

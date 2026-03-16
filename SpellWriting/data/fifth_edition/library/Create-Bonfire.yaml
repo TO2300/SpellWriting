@@ -1,9 +1,8 @@
-name: Create Bonfire
-system: 5e
-level: 0
-school: None
+area_of_effect: C
 damage_type: Fire
-area_of_effect:
-- C
-range: point (60 feet)
 duration: concentration (1 minute)
+level: 0
+name: Create Bonfire
+range: point (60 feet)
+school: None
+system: 5e

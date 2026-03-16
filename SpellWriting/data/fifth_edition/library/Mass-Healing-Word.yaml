@@ -1,9 +1,8 @@
-name: Mass Healing Word
-system: 5e
-level: 3
-school: Abjuration
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: point (60 feet)
 duration: special (Instant)
+level: 3
+name: Mass Healing Word
+range: point (60 feet)
+school: Abjuration
+system: 5e

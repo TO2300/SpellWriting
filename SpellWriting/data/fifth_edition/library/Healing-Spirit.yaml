@@ -1,9 +1,8 @@
-name: Healing Spirit
-system: 5e
-level: 2
-school: None
+area_of_effect: C
 damage_type: None
-area_of_effect:
-- C
-range: point (60 feet)
 duration: concentration (1 minute)
+level: 2
+name: Healing Spirit
+range: point (60 feet)
+school: None
+system: 5e

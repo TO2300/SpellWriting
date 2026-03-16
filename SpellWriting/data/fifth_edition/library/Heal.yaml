@@ -1,9 +1,8 @@
-name: Heal
-system: 5e
-level: 6
-school: Abjuration
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (60 feet)
 duration: special (Instant)
+level: 6
+name: Heal
+range: point (60 feet)
+school: Abjuration
+system: 5e

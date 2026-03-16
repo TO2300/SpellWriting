@@ -1,8 +1,8 @@
-name: Swift Quiver
-system: 5e
-level: 5
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: concentration (1 minute)
+level: 5
+name: Swift Quiver
+range: point (Self)
+school: Transmutation
+system: 5e

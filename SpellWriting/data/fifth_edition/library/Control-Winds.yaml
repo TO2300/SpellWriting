@@ -1,9 +1,8 @@
-name: Control Winds
-system: 5e
-level: 5
-school: Transmutation
+area_of_effect: C
 damage_type: None
-area_of_effect:
-- C
-range: point (300 feet)
 duration: concentration (1 hour)
+level: 5
+name: Control Winds
+range: point (300 feet)
+school: Transmutation
+system: 5e

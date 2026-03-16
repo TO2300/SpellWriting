@@ -1,9 +1,8 @@
-name: Mass Heal
-system: 5e
-level: 9
-school: Abjuration
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: point (60 feet)
 duration: special (Instant)
+level: 9
+name: Mass Heal
+range: point (60 feet)
+school: Abjuration
+system: 5e

@@ -1,9 +1,8 @@
-name: Wall of Ice
-system: 5e
-level: 6
-school: None
+area_of_effect: W
 damage_type: Cold
-area_of_effect:
-- W
-range: point (120 feet)
 duration: concentration (10 minute)
+level: 6
+name: Wall of Ice
+range: point (120 feet)
+school: None
+system: 5e

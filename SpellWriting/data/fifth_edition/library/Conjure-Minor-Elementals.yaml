@@ -1,13 +1,12 @@
-name: Conjure Minor Elementals
-system: 5e
-level: 4
-school: None
+area_of_effect: S
 damage_type:
 - Acid
 - Cold
 - Fire
 - Lightning
-area_of_effect:
-- S
-range: emanation (15 feet)
 duration: concentration (10 minute)
+level: 4
+name: Conjure Minor Elementals
+range: emanation (15 feet)
+school: None
+system: 5e

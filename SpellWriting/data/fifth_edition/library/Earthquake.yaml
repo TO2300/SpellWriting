@@ -1,9 +1,8 @@
-name: Earthquake
-system: 5e
-level: 8
-school: Transmutation
+area_of_effect: R
 damage_type: Bludgeoning
-area_of_effect:
-- R
-range: point (500 feet)
 duration: concentration (1 minute)
+level: 8
+name: Earthquake
+range: point (500 feet)
+school: Transmutation
+system: 5e

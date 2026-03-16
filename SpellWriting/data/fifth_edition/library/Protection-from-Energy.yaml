@@ -1,9 +1,8 @@
-name: Protection from Energy
-system: 5e
-level: 3
-school: Abjuration
+area_of_effect: ST
 damage_type: None
-area_of_effect:
-- ST
-range: point (Touch)
 duration: concentration (1 hour)
+level: 3
+name: Protection from Energy
+range: point (Touch)
+school: Abjuration
+system: 5e

@@ -1,9 +1,8 @@
-name: Magic Stone
-system: 5e
-level: 0
-school: Transmutation
+area_of_effect: ST
 damage_type: Bludgeoning
-area_of_effect:
-- ST
-range: point (Touch)
 duration: timed (1 minute)
+level: 0
+name: Magic Stone
+range: point (Touch)
+school: Transmutation
+system: 5e

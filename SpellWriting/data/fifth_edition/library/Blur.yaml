@@ -1,8 +1,8 @@
-name: Blur
-system: 5e
-level: 2
-school: Illusion
-damage_type: None
 area_of_effect: None
-range: point (Self)
+damage_type: None
 duration: concentration (1 minute)
+level: 2
+name: Blur
+range: point (Self)
+school: Illusion
+system: 5e

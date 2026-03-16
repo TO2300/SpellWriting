@@ -1,8 +1,8 @@
-name: Tiny Servant
-system: 5e
-level: 3
-school: Transmutation
-damage_type: None
 area_of_effect: None
-range: point (Touch)
+damage_type: None
 duration: timed (8 hour)
+level: 3
+name: Tiny Servant
+range: point (Touch)
+school: Transmutation
+system: 5e

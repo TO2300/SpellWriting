@@ -1,9 +1,8 @@
-name: Life Transference
-system: 5e
-level: 3
-school: None
+area_of_effect: ST
 damage_type: Necrotic
-area_of_effect:
-- ST
-range: point (30 feet)
 duration: special (Instant)
+level: 3
+name: Life Transference
+range: point (30 feet)
+school: None
+system: 5e

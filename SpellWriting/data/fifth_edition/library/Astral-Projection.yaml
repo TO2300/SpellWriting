@@ -1,9 +1,8 @@
-name: Astral Projection
-system: 5e
-level: 9
-school: None
+area_of_effect: MT
 damage_type: None
-area_of_effect:
-- MT
-range: point (10 feet)
 duration: special (Permanent)
+level: 9
+name: Astral Projection
+range: point (10 feet)
+school: None
+system: 5e

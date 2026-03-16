@@ -1,9 +1,8 @@
-name: Holy Weapon
-system: 5e
-level: 5
-school: None
+area_of_effect: MT
 damage_type: Radiant
-area_of_effect:
-- MT
-range: point (Touch)
 duration: concentration (1 hour)
+level: 5
+name: Holy Weapon
+range: point (Touch)
+school: None
+system: 5e

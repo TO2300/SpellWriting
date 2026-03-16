@@ -1,8 +1,8 @@
-name: Major Image
-system: 5e
-level: 3
-school: Illusion
-damage_type: None
 area_of_effect: None
-range: point (120 feet)
+damage_type: None
 duration: concentration (10 minute)
+level: 3
+name: Major Image
+range: point (120 feet)
+school: Illusion
+system: 5e

@@ -1,9 +1,8 @@
-name: Sleep
-system: 5e
-level: 1
-school: Enchantment
+area_of_effect: S
 damage_type: None
-area_of_effect:
-- S
-range: point (60 feet)
 duration: concentration (1 minute)
+level: 1
+name: Sleep
+range: point (60 feet)
+school: Enchantment
+system: 5e

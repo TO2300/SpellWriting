@@ -1,9 +1,8 @@
-name: Incendiary Cloud
-system: 5e
-level: 8
-school: None
+area_of_effect: S
 damage_type: Fire
-area_of_effect:
-- S
-range: point (150 feet)
 duration: concentration (1 minute)
+level: 8
+name: Incendiary Cloud
+range: point (150 feet)
+school: None
+system: 5e

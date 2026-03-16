@@ -1,9 +1,8 @@
-name: Otiluke's Freezing Sphere
-system: 5e
-level: 6
-school: None
+area_of_effect: S
 damage_type: Cold
-area_of_effect:
-- S
-range: point (300 feet)
 duration: special (Instant)
+level: 6
+name: Otiluke's Freezing Sphere
+range: point (300 feet)
+school: None
+system: 5e

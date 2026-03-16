@@ -1,10 +1,10 @@
-name: Forbiddance
-system: 5e
-level: 6
-school: Abjuration
+area_of_effect: None
 damage_type:
 - Necrotic
 - Radiant
-area_of_effect: None
-range: point (Touch)
 duration: timed (1 day)
+level: 6
+name: Forbiddance
+range: point (Touch)
+school: Abjuration
+system: 5e

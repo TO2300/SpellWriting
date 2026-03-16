@@ -1,9 +1,8 @@
-name: Sword Burst
-system: 5e
-level: 0
-school: None
+area_of_effect: S
 damage_type: Force
-area_of_effect:
-- S
-range: radius (5 feet)
 duration: special (Instant)
+level: 0
+name: Sword Burst
+range: radius (5 feet)
+school: None
+system: 5e

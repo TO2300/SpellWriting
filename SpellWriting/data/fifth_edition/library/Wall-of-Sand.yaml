@@ -1,9 +1,8 @@
-name: Wall of Sand
-system: 5e
-level: 3
-school: None
+area_of_effect: W
 damage_type: None
-area_of_effect:
-- W
-range: point (90 feet)
 duration: concentration (10 minute)
+level: 3
+name: Wall of Sand
+range: point (90 feet)
+school: None
+system: 5e
