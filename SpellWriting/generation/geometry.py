@@ -142,7 +142,11 @@ class Founts:
             Radius of the inscribed circle. The default is 1.
         start_angle : float, optional
             Angle from the circle's center to its first vertex. 
+<<<<<<< HEAD
             The default is 2*np.pi/n_points.
+=======
+            The default is np.pi/n_points.
+>>>>>>> e5fbb8165d4cf9a63b0443b319e2065e5906b8d8
         cw: bool, optional
             Clockwise flag for vertex order, the default is True
 
@@ -163,6 +167,13 @@ class Founts:
         
         xs = radius*np.cos(angles)
         ys = radius*np.sin(angles)
+<<<<<<< HEAD
+=======
+        
+        if cw:
+            xs = xs[::-1]
+            ys = ys[::-1]
+>>>>>>> e5fbb8165d4cf9a63b0443b319e2065e5906b8d8
             
         kwargs.pop('nodes', None)
         kwargs.pop('expression', None)
