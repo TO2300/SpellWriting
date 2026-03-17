@@ -13,8 +13,14 @@ import copy
 import numpy as np
 import matplotlib.pyplot as plt
 
-#---------File for defining spell bases----------#
-# every base must haave an input of n and return (x,y)
+SAFE_MATH = MappingProxyType({
+    k: getattr(np, k) for k in ["sin", "cos", "tan", "arcsin", "arccos", 
+                                "arctan", "arctan2", "sinh", "cosh", "tanh", 
+                                "exp", "log", "log10", "sqrt", "abs", "fabs",
+                                "floor", "ceil", "pi", "e", "mean", "hypot",
+                                'array', 'linalg', 'min', 'max', 'linspace',
+                                'arange']
+    })
 
 class Founts:
     """
@@ -22,12 +28,7 @@ class Founts:
     generative input.
     
     """
-    SAFE_MATH = MappingProxyType({
-        k: getattr(np, k) for k in ["sin", "cos", "tan", "arcsin", "arccos", 
-                                    "arctan", "sinh", "cosh", "tanh", "exp", 
-                                    "log", "log10", "sqrt", "abs", "fabs",
-                                    "floor", "ceil", "pi", "e"]
-        })
+    
     PREDEFINED = MappingProxyType({
         'polygon' : ('radius', 
                      'start_angle',
@@ -88,7 +89,7 @@ class Founts:
             # Simple Function
             domain = np.linspace(domain_min, domain_max, n_points)
             env = {'__builtins__': {}, 
-                   **self.SAFE_MATH, 
+                   **SAFE_MATH, 
                    'domain': domain}
             ys = eval(expression, env)
             self.nodes = np.array([domain, ys])
@@ -105,7 +106,7 @@ class Founts:
         elif isinstance(expression, tuple) and len(expression) == 2:
             # Parametric function
             domain = np.linspace(domain_min, domain_max, n_points)
-            env = {'__builtins__': {}, **self.SAFE_MATH, 'domain': domain}
+            env = {'__builtins__': {}, **SAFE_MATH, 'domain': domain}
             xs = eval(expression[0], env)
             ys = eval(expression[1], env)
             self.nodes = np.array([xs, ys])
@@ -153,7 +154,6 @@ class Founts:
         """
         if start_angle is None:
             start_angle = 2*np.pi/n_points
-        print(f'{cw=:} {start_angle=:}')
         
         # CCW Generation
         if cw:
@@ -224,23 +224,32 @@ def generate_necklace(n = 13):
 
 class Leylines:
     
-    SAFE_MATH = MappingProxyType({
-        k: getattr(np, k) for k in ["sin", "cos", "tan", "arcsin", "arccos", 
-                                    "arctan", "sinh", "cosh", "tanh", "exp", 
-                                    "log", "log10", "sqrt", "abs", "fabs",
-                                    "floor", "ceil", "pi", "e", "mean", "hypot",
-                                    ]
-        })
-    
-    
+    __expression_type = None
     PREDEFINED = MappingProxyType({
         'linear' : ('domain', '0*domain'),
         'centre-circle' : ('cos(pi*domain)', 'sin(pi*domain)'),
         # The vector representing a shift in midpoint is 
         # b*np.mean([P,Q],axis=1)/np.hypot(*np.mean([P,Q],axis=1))
+        # Given P and Q
+        #
+        
+        
         # TODO
-        'non-centre-circle' : ('r*cos(',
-                               'b + r*sin(theta0 + domain*((theta1-theta0) % (2*pi)))'),
+        # Normal towards center
+        'non-centre-circle' : ("normal = array((-(Q[1] - P[1]), Q[0] - P[0]));"
+                               "shift = b*normal/linalg.norm([P,Q]);"
+                               "center = mean([P,Q],axis=1) + shift;"
+                               "r = linalg.norm([P, center]);"
+                               "to_P = P - center; to_Q = Q - center;"
+                               "dot = (to_P[0]*to_Q[0]) + (to_P[1]*to_Q[1]);"
+                               "theta0 = arctan2(P[1] - center[1], P[0] - center[0]);"
+                               "theta1 = arctan2(Q[1] - center[1], Q[0] - center[0]);"
+                               "theta_end_ccw = theta1 + 2*pi if theta1 < theta0 else theta1;"
+                               "theta_end_cw = theta1 - 2*pi if theta1 > theta0 else theta1;"
+                               "arc_ccw = r*theta_end_ccw; arc_cw = r*theta_end_cw;"
+                               "ccw_bool = arc_ccw > arc_cw or abs(b) < 1;"
+                               "theta = linspace(theta1, theta_end_ccw, samples) if ccw_bool else linspace(theta0, theta_end_cw, samples);"
+                               "X,Y = r*cos(theta), r*sin(theta)"),
         'exponential' : ('domain', 
                          '(exp(10 * domain) - 1) / (exp(10 * domain_max) - 1)'),
         'inverse-exponential': (
@@ -248,8 +257,7 @@ class Leylines:
             '-(exp(12 * domain) - 1) / (exp(12 * domain_max) - 1)'),
         })
     PREFEDEFINED_KWARGS = MappingProxyType({
-        'non-centre-circle' : {'b' : 0,
-                               'r' : 1}
+        'non-centre-circle' : {'b' : 0}
         })
     
     def __init__(self, 
@@ -281,6 +289,9 @@ class Leylines:
     
     @expression.setter
     def expression(self, expression: str | tuple[str]):
+        p_search = lambda s: re.search(r'\bP\b', s)
+        q_search = lambda s: re.search(r'\bQ\b', s)
+        d_search = lambda s: re.search(r'\bdomain\b', s)
         if isinstance(expression, str) and expression in self.PREDEFINED:
             override = self.PREFEDEFINED_KWARGS.get(expression, {}).copy()
             for key in self.kwargs:
@@ -288,9 +299,26 @@ class Leylines:
                     override[key] = self.kwargs[key]
             self.kwargs.update(override)
             expression = self.PREDEFINED[expression]
+        
+        if isinstance(expression, str):
+            if p_search(expression) and q_search(expression):
+                self.__expression_type = 'pointwise-str' # singular expression
+            elif re.search('\bdomain\b', expression):
+                expression = (expression, '0*domain')
+                self.__expression_type = 'parametric-tuple'
+            else:
+                raise NotImplementedError(f'\'{expression=:}\' Invalid'
+                                          ' form for Leylines!')
+                
+        elif isinstance(expression, typing.Iterable) and len(expression) == 2:
+            if all(p_search(exp) or q_search(exp) for exp in expression):
+                self.__expression_type = 'pointwise-tuple'
+            elif all(d_search(exp) for exp in expression):
+                self.__expression_type = 'parametric-tuple'
+            else:
+                NotImplementedError(f"'{expression=:}' Invalid form for Leylines")
+            expression = tuple(expression)
             
-        elif isinstance(expression, str):
-            expression = (expression, '0*domain')
         self._expression = expression
         self.default_curves = self.generate_curves()
         return        
@@ -301,7 +329,7 @@ class Leylines:
         domain = np.linspace(self.domain_min, self.domain_max, samples)
         # Parametric function
         env = {'__builtins__': {}, 
-               **self.SAFE_MATH, 
+               **SAFE_MATH, 
                'domain': domain, 
                **self.__dict__,
                **self.kwargs}
@@ -318,7 +346,7 @@ class Leylines:
         if isinstance(self.expression, str):
             # Simple Function
             env = {'__builtins__': {}, 
-                   **self.SAFE_MATH, 
+                   **SAFE_MATH, 
                    'domain': domain}
             ys = eval(self.expression, env)
             curve = np.array([domain, ys])
@@ -413,8 +441,21 @@ class Leylines:
         if samples is None:
             samples = self.resolution
         
-        raw_curve = self._eval_expression(samples)
-        normal = self._normalize_curve(raw_curve.copy())
+        # Expressions can be tuple[str] containing "domain"
+        #                    tuple[str] containing "P" | "Q"
+        #                    str        containing "domain"
+        #                    str        containg P & Q
+        
+        normal = None
+        if 'parametric' in self.__expression_type:
+            raw_curve = self._eval_expression(samples)
+            normal = self._normalize_curve(raw_curve.copy())
+        elif 'pointwise' in self.__expression_type:
+            pass
+        else:
+            raise NotImplementedError(f'No idea how you got here, {self.expression=:}, {self.__expression_type=:}')
+            
+               
         curves = np.zeros((*self.line_pairings.shape,samples), dtype=np.float64)
         
         for order in range(curves.shape[0]):
@@ -424,9 +465,18 @@ class Leylines:
                 P = self.founts[:,a] 
                 Q = self.founts[:,b]
                 
-
-                
-                curve = self._transform_to_segment(normal.copy(), P, Q)
+                if normal is None: # Pointwise only
+                    env = {'__builtins__': {}, 
+                            **SAFE_MATH, 
+                            'P': P,
+                            'Q': Q,
+                            'samples': samples,
+                            **self.__dict__,
+                            **self.kwargs}
+                    exec(self.expression, env)
+                    curve = np.array([env['X'], env['Y']])
+                else:
+                    curve = self._transform_to_segment(normal.copy(), P, Q)
                 
                 # print(f"{P} -> {Q}\n{curve}\n\n")
                 curves[order, index] = curve.astype(np.float64)
@@ -440,5 +490,5 @@ class Leylines:
             for diff, coords in enumerate(order_array):
                 plt.plot(*coords, color=cmap.colors[order])
         
-        plt.plot(*self.nodes, 'bo')
-        plt.plot(*self.nodes[:,0], 'ro')
+        plt.plot(*self.founts, 'bo')
+        plt.plot(*self.founts[:,0], 'ro')

@@ -69,6 +69,7 @@ class SpellData:
     Generic data container for n-attribute defined spells
     
     """
+    name = ''
     
     def __init_subclass__(cls, **kwargs):
         attributes = cls.collect_attributes(cls)

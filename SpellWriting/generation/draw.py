@@ -9,13 +9,12 @@ import typing
 import matplotlib.pyplot as plt
 
 from SpellWriting.generation import data, geometry
-from SpellWriting.data.fifth_edition import SpellData_5e
 
 
 class Glyph:
     
     def __init__(self,
-                 spelldata: data.SpellData = SpellData_5e.get_spell('Fireball', source='offline'),
+                 spelldata: data.SpellData = data.SpellData(),
                  geometry_override: geometry.Leylines = None) -> typing.Self:
     
         self.spelldata = spelldata
@@ -26,7 +25,7 @@ class Glyph:
                 geometry.Founts(n=len(spelldata.collect_attributes())))
         
     
-    def plot(self, legend: bool = False, legend_kwargs: dict = {}):
+    def draw(self, legend: bool = False, legend_kwargs: dict = {}):
         # TODO: Add thematic colors
         plt.figure()
         cmap = plt.get_cmap('tab20')
