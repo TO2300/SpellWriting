@@ -1,3 +1,7 @@
+#[build-system]
+#requires = ["hatchling", "uv-dynamic-versioning"]
+#build-backend = "hatchling.build"
+
 [project]
 name = "spellwriting"
 version = "0.0.1"
@@ -17,3 +21,10 @@ dependencies = [
 
 [tool.setuptools.package-data]
 SpellWriting = ["data/**/*.yaml"]
+
+
+#[tool.hatch.version]
+#source = "uv-dynamic-versioning"
+
+#[tool.uv-dynamic-versioning]
+#fallback-version = "0.0.1"
