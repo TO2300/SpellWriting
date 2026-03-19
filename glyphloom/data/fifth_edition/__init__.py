@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Mar 18 20:26:26 2026
+
+@author: trent
+"""
+
 #
 from pathlib import Path
 from typing import Literal
@@ -6,7 +13,7 @@ import yaml
 import requests
 from rapidfuzz import process
 
-from SpellWriting.generation import SpellData
+from glyphloom.generation import SpellData
 
 
 SpellData_5e = SpellData.from_yaml(

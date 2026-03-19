@@ -8,19 +8,18 @@ import typing
 
 import matplotlib.pyplot as plt
 
-from SpellWriting.generation import data, geometry
-from SpellWriting.data.fifth_edition import SpellData_5e
+from glyphloom.generation import data, geometry
 
 
 class Glyph:
     
     def __init__(self,
-                 spelldata = None,
-                 geometry_override = None) -> typing.Self:
+                 spelldata: data.SpellData = None,
+                 leylines: geometry.Leylines = None) -> typing.Self:
     
         self.spelldata = spelldata
-        if geometry_override:
-            self.leylines = geometry_override
+        if leylines:
+            self.leylines = leylines
         else:
             self.leylines = geometry.Leylines(
                 geometry.Founts(n=len(spelldata.collect_attributes())))
@@ -29,7 +28,7 @@ class Glyph:
     def draw(self, legend: bool = False, legend_kwargs: dict = {}):
         # TODO: Add thematic colors
         plt.figure()
-        cmap = plt.get_cmap('tab20')
+        cmap = plt.get_cmap('tab10')
         
         
         for attr in self.spelldata.collect_attributes().values():
@@ -48,8 +47,17 @@ class Glyph:
                     plt.plot(*path, color=cmap.colors[order])
                 else:
                     plt.plot(*path, color=cmap.colors[order], label=attr.name)
-        plt.plot(*self.leylines.founts, 'bo')
-        plt.plot(*self.leylines.founts[:,0], 'ro')
+        plt.plot(*self.leylines.founts[:,1:], 'pk', fillstyle='bottom', markersize=8)
+        plt.plot(*self.leylines.founts[:,0], 'pk', fillstyle='top', markersize=8)
         plt.title(self.spelldata.name)
         if legend:
             plt.legend(**legend_kwargs)
+        plt.axis('off')
+            
+if __name__ == '__main__':
+    from glyphloom.data.fifth_edition import SpellData_5e
+    
+    spelldata = SpellData_5e.get_spell('Fireball')
+    leylines = geometry.Leylines(geometry.Founts(n_points=13),
+                                 expression='exponential')
+    Glyph(spelldata, leylines).draw()
